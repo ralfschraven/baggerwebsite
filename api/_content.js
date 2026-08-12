@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const { requireAdmin, sendJson } = require("./_auth");
+const { readJson, writeJson } = require("./_storage");
 
 const root = path.resolve(__dirname, "..");
 const blobPrefix = "cms";
@@ -41,20 +42,6 @@ const defaultJobSettings = {
   showOpenApplication: false,
 };
 
-let blobModulePromise = null;
-
-async function getBlobModule() {
-  if (!process.env.BLOB_READ_WRITE_TOKEN) {
-    return null;
-  }
-
-  if (!blobModulePromise) {
-    blobModulePromise = import("@vercel/blob").catch(() => null);
-  }
-
-  return blobModulePromise;
-}
-
 function readLocalStore(config) {
   try {
     const parsed = JSON.parse(fs.readFileSync(config.file, "utf8"));
@@ -65,27 +52,11 @@ function readLocalStore(config) {
 }
 
 async function readBlobStore(config) {
-  const blob = await getBlobModule();
-
-  if (!blob) {
-    return null;
-  }
-
   try {
-    const result = await blob.get(config.blobPath, { access: "private" });
-
-    if (result?.statusCode !== 200 || !result.stream) {
-      return null;
-    }
-
-    const parsed = JSON.parse(await readStreamAsText(result.stream));
-    return Array.isArray(parsed) ? parsed : [];
+    const parsed = await readJson(config.blobPath);
+    return Array.isArray(parsed) ? parsed : null;
   } catch (error) {
-    if (isBlobNotFoundError(error)) {
-      return null;
-    }
-
-    throw error;
+    return null;
   }
 }
 
@@ -105,27 +76,11 @@ function readLocalObjectStore(config, fallback) {
 }
 
 async function readBlobObjectStore(config) {
-  const blob = await getBlobModule();
-
-  if (!blob) {
-    return null;
-  }
-
   try {
-    const result = await blob.get(config.blobPath, { access: "private" });
-
-    if (result?.statusCode !== 200 || !result.stream) {
-      return null;
-    }
-
-    const parsed = JSON.parse(await readStreamAsText(result.stream));
+    const parsed = await readJson(config.blobPath);
     return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : null;
   } catch (error) {
-    if (isBlobNotFoundError(error)) {
-      return null;
-    }
-
-    throw error;
+    return null;
   }
 }
 
@@ -135,58 +90,7 @@ async function readJobSettings() {
 }
 
 async function writeJobSettings(settings) {
-  const blob = await getBlobModule();
-
-  if (!blob) {
-    throw new Error("Opslaan op Vercel heeft BLOB_READ_WRITE_TOKEN en @vercel/blob nodig.");
-  }
-
-  await blob.put(jobSettingsConfig.blobPath, `${JSON.stringify(normalizeJobSettings(settings), null, 2)}\n`, {
-    access: "private",
-    allowOverwrite: true,
-    contentType: "application/json; charset=utf-8",
-  });
-}
-
-async function readStreamAsText(stream) {
-  if (typeof stream.getReader === "function") {
-    const reader = stream.getReader();
-    const chunks = [];
-
-    while (true) {
-      const { value, done } = await reader.read();
-
-      if (done) {
-        break;
-      }
-
-      chunks.push(Buffer.from(value));
-    }
-
-    return Buffer.concat(chunks).toString("utf8");
-  }
-
-  if (typeof stream[Symbol.asyncIterator] === "function") {
-    const chunks = [];
-
-    for await (const chunk of stream) {
-      chunks.push(Buffer.from(chunk));
-    }
-
-    return Buffer.concat(chunks).toString("utf8");
-  }
-
-  if (typeof stream.text === "function") {
-    return stream.text();
-  }
-
-  return "";
-}
-
-function isBlobNotFoundError(error) {
-  const name = String(error?.name || "");
-  const message = String(error?.message || "");
-  return /not.*found/i.test(name) || /not.*found/i.test(message);
+  await writeJson(jobSettingsConfig.blobPath, normalizeJobSettings(settings));
 }
 
 async function readStore(type) {
@@ -202,17 +106,12 @@ async function readStore(type) {
 
 async function writeStore(type, items) {
   const config = stores[type];
-  const blob = await getBlobModule();
 
-  if (!config || !blob) {
-    throw new Error("Opslaan op Vercel heeft BLOB_READ_WRITE_TOKEN en @vercel/blob nodig.");
+  if (!config) {
+    throw new Error("Onbekende contentcollectie.");
   }
 
-  await blob.put(config.blobPath, `${JSON.stringify(items, null, 2)}\n`, {
-    access: "private",
-    allowOverwrite: true,
-    contentType: "application/json; charset=utf-8",
-  });
+  await writeJson(config.blobPath, items);
 }
 
 function slugify(value) {
@@ -413,6 +312,7 @@ function normalizeAdminPostInput(input, items, currentItem = null, fallbackType 
 function normalizeTeamInput(input, items, currentItem = null) {
   const name = String(input.name || "").trim();
   const role = String(input.role || "").trim();
+  const linkedin = String(input.linkedin || currentItem?.linkedin || "").trim();
   const image = String(input.image || currentItem?.image || "").trim();
 
   if (!name) {
@@ -427,6 +327,10 @@ function normalizeTeamInput(input, items, currentItem = null) {
     throw new Error("Foto is verplicht.");
   }
 
+  if (linkedin && !/^https?:\/\//i.test(linkedin)) {
+    throw new Error("LinkedIn moet een volledige https://-link zijn.");
+  }
+
   const now = new Date().toISOString();
   const requestedOrder = Number(input.order);
 
@@ -435,6 +339,7 @@ function normalizeTeamInput(input, items, currentItem = null) {
     slug: uniqueSlug(slugify(String(input.slug || currentItem?.slug || name)), items, currentItem?.id),
     name,
     role,
+    linkedin,
     image,
     order:
       Number.isFinite(requestedOrder) && requestedOrder > 0
@@ -487,7 +392,7 @@ async function parseJsonBody(request) {
 function sendMutationError(response, error) {
   const message = error instanceof SyntaxError ? "Ongeldige JSON." : error.message || "Opslaan mislukt.";
   const statusCode =
-    /BLOB_READ_WRITE_TOKEN|@vercel\/blob|permanente opslag/i.test(message) ? 501 : 400;
+    /Netlify|permanente opslag/i.test(message) ? 501 : 400;
 
   sendJson(response, statusCode, { error: message });
 }

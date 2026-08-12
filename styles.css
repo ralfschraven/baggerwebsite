@@ -24368,3 +24368,210 @@ body[data-page="projecten"] .project-builder-page .project-builder-column-note h
   font-family: var(--font-h1) !important;
   font-weight: var(--font-h1-weight) !important;
 }
+
+/* Rich-text emphasis in project hero titles keeps its markup but follows the
+   upright, slim title treatment used across the public site. */
+body:not(.project-builder-admin) .project-builder-page .project-builder-hero__copy h1 em,
+.project-builder-admin .project-builder-hero__copy h1 em,
+.builder-preview-block .project-builder-hero__copy h1 em {
+  font-family: var(--font-h1) !important;
+  font-style: normal !important;
+  font-weight: var(--font-h1-weight) !important;
+}
+
+/* Final checklist pass: keep the shared visual language consistent across
+   the public pages and their responsive variants. */
+.nav-shell,
+body:not([data-page="home"]) .nav-shell,
+body:not([data-page="home"]) .site-header.is-condensed .nav-shell {
+  background: #111b3a !important;
+  background-image: none !important;
+}
+
+/* Keep the open mobile navigation on the same solid dark-blue surface as the
+   desktop bar. This also removes the legacy gradient that otherwise appears
+   only while the menu is expanded. */
+body[data-page="home"] .site-header.is-menu-open .nav-shell,
+body[data-page="home"] .site-header:has(.menu-toggle[aria-expanded="true"]) .nav-shell,
+body:not([data-page="home"]) .site-header.is-menu-open .nav-shell,
+body:not([data-page="home"]) .site-header:has(.menu-toggle[aria-expanded="true"]) .nav-shell,
+body[data-page="home"] .mobile-menu,
+body:not([data-page="home"]) .mobile-menu {
+  background: #111b3a !important;
+  background-image: none !important;
+}
+
+body[data-page="home"] .home-partner-strip__track {
+  animation: none !important;
+  transform: none !important;
+}
+
+body[data-page="home"] .home-partner-strip__list[aria-hidden="true"] {
+  display: none;
+}
+
+body[data-page="home"] .home-partner-strip__list li {
+  background: #ffffff;
+  border: 1px solid rgba(56, 81, 147, 0.14);
+  box-shadow: 0 8px 22px rgba(17, 25, 48, 0.08);
+}
+
+body[data-page="home"] .home-partner-strip__list img {
+  opacity: 1;
+  filter: none;
+}
+
+body[data-page="home"] .home-mission-copy p {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+body[data-page="home"] .home-mission-copy p strong {
+  font-weight: 700;
+}
+
+body[data-page="home"] .home-hero-copy h1 .home-hero-connector,
+body[data-page="service-detail"] .service-detail-hero__head > p:not(.service-detail-kicker):not(.service-detail-hero__copy) {
+  font-style: normal;
+}
+
+/* Hero copy uses the regular title face. Italic styling is reserved for the
+   explicitly branded Blauwe Bagger wordmark in the services landing hero. */
+body[data-page="home"] .home-hero-copy h1,
+body[data-page="service-detail"] .service-detail-hero__head h1,
+body[data-page="service-detail"] .service-detail-hero__head > p:not(.service-detail-kicker):not(.service-detail-hero__copy) {
+  font-style: normal;
+}
+
+/* Blueprint is a slim title treatment everywhere it appears. The markup uses
+   spans so the brand word can remain blue without inheriting the old italic
+   emphasis used by the previous timeline design. */
+body[data-page="het-plan"] .plan-intro-head h1 .plan-intro-title-mark,
+body[data-page="het-plan"] .plan-timeline-title span,
+body[data-page="over-ons"] .about-plan-heading h2 span,
+body[data-page="over-ons"] .about-plan-timeline .plan-timeline-title span {
+  font-style: normal !important;
+  font-weight: var(--font-h1-weight) !important;
+}
+
+/* Metric/result cards use the same slim title face as the rest of the
+   project builder, rather than the legacy heavy italic display treatment. */
+body[data-page="projecten"] .project-builder-page
+  :is(.project-builder-metric strong, .project-builder-result-card strong, .project-builder-metal-card strong) {
+  font-family: var(--font-h1) !important;
+  font-style: normal !important;
+  font-weight: var(--font-h1-weight) !important;
+}
+
+/* Keep the brand name italic in the services landing hero, while the
+   connector words and supporting copy use the regular hero treatment. */
+body[data-page="services"] .service-index-page .service-detail-hero__head h1 em,
+body[data-page="service-detail"] .service-index-page .service-detail-hero__head h1 em {
+  font-style: italic;
+}
+
+body[data-page="service-detail"] .service-widget-impact__label,
+body[data-page="service-detail"] .service-widget-impact__from,
+body[data-page="service-detail"] .service-widget-impact__to {
+  font-style: normal;
+  font-weight: 560;
+}
+
+body[data-page="service-detail"] .service-widget-impact__to {
+  font-weight: 650;
+}
+
+body[data-page="over-ons"] .about-story-section {
+  min-height: 100svh;
+  padding: clamp(140px, 14vh, 190px) 0 clamp(64px, 9vh, 110px);
+  background-image: linear-gradient(180deg, rgba(9, 17, 39, 0.18), rgba(9, 17, 39, 0.78)), url("/assets/media/team-photo.jpg") !important;
+  background-position: center;
+  background-size: cover;
+}
+
+body[data-page="over-ons"] .about-story-section .about-frame {
+  display: flex;
+  min-height: calc(100svh - 250px);
+  align-items: flex-end;
+}
+
+body[data-page="over-ons"] .about-story-copy {
+  max-width: 760px;
+}
+
+body[data-page="over-ons"] .about-story-section h1 {
+  color: #ffffff;
+  font-weight: var(--font-h1-weight);
+}
+
+body[data-page="over-ons"] .about-hero-accent {
+  color: #7892ff;
+}
+
+body[data-page="over-ons"] .about-story-text {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+body[data-page="over-ons"] .about-team-photo {
+  display: none;
+}
+
+body[data-page="over-ons"] .about-team-card img {
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point span,
+body[data-page="het-plan"] .plan-timeline-point span {
+  font-weight: 650;
+}
+
+body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point::after,
+body[data-page="het-plan"] .plan-timeline-point::after {
+  height: clamp(30px, 3.4vw, 48px);
+}
+
+body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point--bottom span,
+body[data-page="het-plan"] .plan-timeline-point--bottom span {
+  top: calc(100% + clamp(42px, 4.4vw, 60px));
+}
+
+/* Give the commercial-scale milestone its own lower label lane so it never
+   collides with the preceding installation label. */
+body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point[data-plan-title="Eerste project op commerciële schaal"]::after,
+body[data-page="het-plan"] .plan-timeline-point[data-plan-title="Eerste project op commerciële schaal"]::after {
+  height: clamp(62px, 5.6vw, 84px);
+}
+
+body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point[data-plan-title="Eerste project op commerciële schaal"] span,
+body[data-page="het-plan"] .plan-timeline-point[data-plan-title="Eerste project op commerciële schaal"] span {
+  top: calc(100% + clamp(78px, 6.6vw, 98px));
+}
+
+/* Keep the public footer in sync on every page, including older static
+   templates that still contain the retired links/content in their markup. */
+body:not(.project-builder-admin) .site-footer.site-footer--brand .home-footer-column a[href="/services"],
+body:not(.project-builder-admin) .site-footer.site-footer--brand .home-footer-column a[href^="/services/"],
+body:not(.project-builder-admin) .site-footer.site-footer--brand .home-footer-column a[href^="services/"],
+body:not(.project-builder-admin) .site-footer.site-footer--brand .home-footer-column a[href="/login"],
+body:not(.project-builder-admin) .site-footer.site-footer--brand .home-footer-column a[href="/privacy-policy"],
+body:not(.project-builder-admin) .site-footer.site-footer--brand .home-footer-links a[href*="instagram.com"],
+body:not(.project-builder-admin) .site-footer.site-footer--brand .home-footer-bottom a[href="/privacy-policy"],
+body:not(.project-builder-admin) .site-footer.site-footer--brand .home-footer-address p:nth-of-type(3):not(.home-footer-address-street),
+body:not(.project-builder-admin) .site-footer.site-footer--brand .home-footer-contact {
+  display: none !important;
+}
+
+body:not(.project-builder-admin) .site-footer.site-footer--brand .home-footer-address p.home-footer-address-street {
+  display: block !important;
+}
+
+.about-team-card__linkedin {
+  display: inline-flex;
+  margin-top: 10px;
+  color: #385193;
+  font-size: 0.85rem;
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

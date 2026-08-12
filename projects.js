@@ -458,8 +458,8 @@ const staticProjectTranslations = {
     titleLines: ['Concrete from <em>sediment</em>', "in collaboration with TBI"],
     subtitle: "From waterbed to concrete mix",
     body: [
-      "Together with TBI, Blauwe Bagger is investigating whether dredged sediment can be used directly as a raw material for concrete. TBI is one of the Netherlands' largest construction and engineering companies and is committed to making its building processes significantly more sustainable.",
-      "This project focuses on BlueSand and BlueFiller, two secondary raw materials recovered from dredged sediment, as replacements for primary sand and filler fractions in concrete mixes.",
+      "Together with TBI, Blauwe Bagger is investigating whether dredged sediment can be used directly as circular material for concrete. TBI is one of the Netherlands' largest construction and engineering companies and is committed to making its building processes significantly more sustainable.",
+      "This project focuses on BlueSand and BlueFiller, two secondary circular materials recovered from dredged sediment, as replacements for primary sand and filler fractions in concrete mixes.",
     ],
     stats: [
       { number: "BlueSand", label: "Sand fraction from sediment" },
@@ -480,7 +480,7 @@ const staticProjectTranslations = {
       ["Circular construction story", "TBI can build more sustainably and strengthen its tender position"],
       ["Local chain", "Materials recovered from Dutch waters, without long supply chains"],
     ],
-    cta: "Interested in collaborating? Get in touch to explore how Blauwe Bagger can turn your dredging project into valuable raw materials for construction.",
+    cta: "Interested in collaborating? Get in touch to explore how Blauwe Bagger can turn your dredging project into valuable circular materials for construction.",
   },
   "bakstenen-uit-bagger-dc-bricks": {
     crumb: "Bricks from sediment / DC-bricks",
@@ -492,7 +492,7 @@ const staticProjectTranslations = {
       "The clay fraction, also known as BlueFiller or BlueCalc, has promising properties for the ceramic industry. This project maps those opportunities.",
     ],
     stats: [
-      { number: "Clay", label: "Primary raw material for ceramics" },
+      { number: "Clay", label: "Primary circular material for ceramics" },
       { number: "BlueCalc", label: "Calcined clay fraction" },
       { number: "8%", label: "Potential reduction in construction emissions" },
     ],
@@ -561,7 +561,7 @@ const staticProjectTranslations = {
     subtitle: "Data-driven dredging management at provincial scale",
     body: [
       "Zuid-Holland manages hundreds of kilometres of waterways. The province wants to make dredging management more sustainable while reducing costs. Together with Blauwe Bagger, it started a pilot to explore how its sediment flows can be organised differently over the long term.",
-      "The project is not only about recovering raw materials, but also about building a provincial data system for waterbed surveys, so the most promising reuse locations can be identified each year.",
+      "The project is not only about recovering circular materials, but also about building a provincial data system for waterbed surveys, so the most promising reuse locations can be identified each year.",
     ],
     stats: [
       { number: "Provincial", label: "Project scale" },
@@ -580,15 +580,15 @@ const staticProjectTranslations = {
     crumb: "Amsterdam / IJburg",
     tag: "Practical test",
     titleLines: ['Amsterdam <em>IJburg</em>'],
-    subtitle: "Sediment as a construction raw material for new districts",
+    subtitle: "Sediment as circular construction material for new districts",
     body: [
       "The expansion of IJburg requires large-scale earthworks and dredging in the IJmeer. The City of Amsterdam and its contractors need to process the released sediment as sustainably and cost-effectively as possible.",
-      "This project showed that part of the sediment can be used directly as fill material and as a raw material for local construction after on-site separation. The chain closes: IJburg's sediment becomes the raw material for IJburg's buildings.",
+      "This project showed that part of the sediment can be used directly as fill material and as circular material for local construction after on-site separation. The chain closes: IJburg's sediment becomes circular material for IJburg's buildings.",
     ],
     stats: [
       { number: "Local", label: "Closed chain at district level" },
       { number: "Fill", label: "Sand used as fill material" },
-      { number: "Build", label: "Raw materials for new construction" },
+      { number: "Build", label: "Circular materials for new construction" },
     ],
     stepsTitle: "Findings",
     steps: [
@@ -602,10 +602,10 @@ const staticProjectTranslations = {
     crumb: "Heavy-metal extraction from sediment",
     tag: "R&D",
     titleLines: ['Heavy-metal <em>extraction</em>', "from sediment"],
-    subtitle: "From contamination to valuable raw material",
+    subtitle: "From contamination to valuable circular material",
     body: [
       "Sediment contains more than sand and clay. In some waterways it also contains concentrations of heavy metals such as copper, zinc and nickel. These fractions often make sediment unsuitable for reuse and lead to high processing costs.",
-      "In this R&D project, Blauwe Bagger is investigating whether these metals can be extracted selectively, leaving cleaner fractions and making the metals themselves available as secondary raw materials for manufacturing.",
+      "In this R&D project, Blauwe Bagger is investigating whether these metals can be extracted selectively, leaving cleaner fractions and making the metals themselves available as secondary circular materials for manufacturing.",
     ],
     stats: [
       { number: "Cu, Zn", label: "Copper, zinc and other metals" },
@@ -627,7 +627,7 @@ const staticProjectTranslations = {
     subtitle: "Tackling the forever-chemicals problem at the source",
     body: [
       "PFAS, or per- and polyfluoroalkyl substances, are one of the dredging sector's greatest challenges. Their presence in waterbeds means a growing share of Dutch sediment cannot be freely applied, driving up processing costs and depot capacity pressure.",
-      "Blauwe Bagger is investigating whether targeted separation can concentrate PFAS in a small, manageable fraction, releasing most of the sediment for reuse as a raw material.",
+      "Blauwe Bagger is investigating whether targeted separation can concentrate PFAS in a small, manageable fraction, releasing most of the sediment for reuse as circular material.",
     ],
     stats: [
       { number: "PFAS", label: "Most urgent sediment challenge in NL" },

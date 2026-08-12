@@ -4,6 +4,7 @@
     "slug": "abbe-hekkert",
     "name": "Abbe Hekkert",
     "role": "Co-Founder",
+    "linkedin": "",
     "image": "/assets/media/team-abbe.jpg",
     "order": 1
   },
@@ -12,6 +13,7 @@
     "slug": "sil-van-de-bovenkamp",
     "name": "Sil van de Bovenkamp",
     "role": "Co-Founder",
+    "linkedin": "",
     "image": "/assets/media/team-sil.jpg",
     "order": 2
   },
@@ -20,6 +22,7 @@
     "slug": "yannick-laret",
     "name": "Yannick Laret",
     "role": "Electrical Engineer",
+    "linkedin": "",
     "image": "/assets/media/team-yannick.jpg",
     "order": 3
   },
@@ -28,6 +31,7 @@
     "slug": "gijs-breebaart",
     "name": "Gijs Breebaart",
     "role": "Business Developer",
+    "linkedin": "",
     "image": "/assets/media/team-sil.jpg",
     "order": 4
   }

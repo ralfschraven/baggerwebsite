@@ -1,0 +1,54 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/het-plan"
+  to = "/over-ons#het-plan"
+  status = 301
+
+[[redirects]]
+  from = "/projecten/*"
+  to = "/project-detail.html?slug=:splat"
+  status = 200
+
+[[redirects]]
+  from = "/en"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/services/baggeraars"
+  to = "/services/baggeraars.html"
+  status = 200
+
+[[redirects]]
+  from = "/services/grondstoffen"
+  to = "/services/grondstoffen.html"
+  status = 200
+
+[[redirects]]
+  from = "/producten/bluesand"
+  to = "/producten/bluesand.html"
+  status = 200
+
+[[redirects]]
+  from = "/producten/bluefiller"
+  to = "/producten/bluefiller.html"
+  status = 200
+
+[[redirects]]
+  from = "/producten/bluecalc"
+  to = "/producten/bluecalc.html"
+  status = 200
+
+[[redirects]]
+  from = "/producten/blueclay"
+  to = "/producten/blueclay.html"
+  status = 200

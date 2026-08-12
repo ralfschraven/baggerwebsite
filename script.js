@@ -191,7 +191,7 @@ const i18n = {
   en: {
     title: "Blauwe Bagger | Home",
     description:
-      "Blauwe Bagger processes dredged sediment into new raw materials. Discover our circular approach, projects, products, team and contact options.",
+      "Blauwe Bagger processes dredged sediment into new circular materials. Discover our circular approach, projects, products, team and contact options.",
     text: {
       "Ga naar inhoud": "Skip to content",
       "Het plan": "The Plan",
@@ -211,16 +211,16 @@ const i18n = {
       "Toon details: Hergebruik": "Show details: Reuse",
       "Bagger als": "Sediment as",
       als: "as",
-      Grondstof: "Raw Material",
+      Grondstof: "Circular material",
       Explore: "Explore",
       Bagger: "Sediment",
       Scheiden: "Separating",
       "Ontdek het plan": "Explore the plan",
       "Onze services": "Our services",
       "Onze Missie": "Our Mission",
-      "Route van bagger naar grondstof": "Route from sediment to raw material",
+      "Route van bagger naar grondstof": "Route from sediment to circular material",
       "Blauwe Bagger werkt aan een wereld waarin grondstoffen nooit verloren gaan. Wij zetten bagger om tot bruikbare grondstoffen die bijdragen aan een circulaire toekomst.":
-        "Blauwe Bagger works toward a world where raw materials are never lost. We turn dredged sediment into usable raw materials that contribute to a circular future.",
+        "Blauwe Bagger works toward a world where materials are never lost. We turn dredged sediment into usable circular materials that contribute to a circular future.",
       "Het Probleem": "The Problem",
       "Baggerindustrie": "Dredging industry",
       Bouwindustrie: "Construction industry",
@@ -228,7 +228,7 @@ const i18n = {
       Procesaanpak: "Process approach",
       "Onze Oplossing": "Our Solution",
       "Een praktische route van baggerstroom naar herbruikbare grondstof.":
-        "A practical route from dredged sediment stream to reusable raw material.",
+        "A practical route from dredged sediment stream to reusable circular material.",
       "Input scan": "Input scan",
       "BlueBox module": "BlueBox module",
       "Output routes": "Output routes",
@@ -256,7 +256,7 @@ const i18n = {
       "Met een efficiënte poorttoets bepaalt de tool direct de exacte stappen voor scheiding via onze BlueBox en nabewerking, zoals verhitting of calcinatie. Bij een positieve match rolt er direct een recept uit om de bagger optimaal op te waarderen. Is de kwaliteit onvoldoende en niet te corrigeren? Dan filtert de tool de plot direct uit.":
         "Using an efficient gate test, the tool immediately determines the exact separation steps via our BlueBox and the required post-processing, such as heating or calcination. A positive match produces a recipe for optimally upgrading the sediment. If the quality is insufficient and cannot be corrected, the tool filters out the plot immediately.",
       "Zo transformeren we onbenutte data in een gegarandeerde, hoogwaardige circulaire grondstof.":
-        "This is how we transform unused data into a guaranteed, high-quality circular raw material.",
+        "This is how we transform unused data into a guaranteed, high-quality circular material.",
       Ontwatering: "Dewatering",
       "Onze mobiele unit maakt het mogelijk om baggerspecie direct op locatie in te dikken. Vooral op afgelegen of moeilijk bereikbare plekken voorkomt dit onnodig transport van grote volumes waterige bagger. Dat betekent: lagere kosten, minder CO₂-uitstoot en een veel efficiënter proces.":
         "Our mobile unit makes it possible to dewater dredged sediment directly on site. Especially in remote or difficult-to-reach locations, this prevents unnecessary transport of large volumes of watery sediment. The result: lower costs, fewer CO₂ emissions and a much more efficient process.",
@@ -271,9 +271,9 @@ const i18n = {
         "Before the separated materials enter the market, they can be upgraded. Targeted post-processing techniques, such as heating, grinding or calcination, align the material's physical and chemical properties with the strict requirements of the construction and concrete industries. Market demand always leads this process.",
       "Circulaire toepassingen": "Circular applications",
       "De opgeschoonde en bewerkte grondstoffen krijgen een hoogwaardig tweede leven. In plaats van te eindigen in een depot, worden ze direct ingezet als betrouwbare secundaire bouwstoffen. Denk hierbij aan aggregaten voor de betonindustrie, of hoogwaardige klei voor de keramische industrie.":
-        "The cleaned and processed raw materials receive a high-quality second life. Instead of ending up in a depot, they are used directly as reliable secondary construction materials, such as aggregates for the concrete industry or high-quality clay for the ceramics industry.",
+        "The cleaned and processed circular materials receive a high-quality second life. Instead of ending up in a depot, they are used directly as reliable secondary construction materials, such as aggregates for the concrete industry or high-quality clay for the ceramics industry.",
       "Door onze circulaire aanpak verminderen we de behoefte aan de winning van primaire grondstoffen, zoals nieuw zand en grind, aanzienlijk. Zo verlagen we de milieu-impact en bouwen we letterlijk aan een duurzamere toekomst.":
-        "Our circular approach significantly reduces the need to extract primary raw materials such as new sand and gravel. This lowers environmental impact and quite literally builds a more sustainable future.",
+        "Our circular approach significantly reduces the need to extract primary materials such as new sand and gravel. This lowers environmental impact and quite literally builds a more sustainable future.",
       "Met data uit waterbodemonderzoek bepalen we welke fracties in bagger geschikt zijn voor hoogwaardige hergebruikroutes.":
         "Using data from sediment surveys, we determine which fractions in dredged material are suitable for high-value reuse routes.",
       "Vervolgens wordt de BlueBox op locatie ingezet om bagger te ontwateren, te scheiden en op te schonen tot inzetbare materialen.":
@@ -295,8 +295,6 @@ const i18n = {
       "Commerciële projecten": "Commercial projects",
       "Eerste project op commerciële schaal": "First project at commercial scale",
       "Commerciële projecten op operationele schaal": "Commercial projects at operational scale",
-      Internationalisering: "Internationalisation",
-      "Verbreding buiten bagger": "Expansion beyond dredged sediment",
       "Circulariteit in gehele Nederlandse industrie": "Circularity across Dutch industry",
       "Blauwe Bagger is in 2022 opgericht, ontstaan vanuit een opdracht om een reststroom circulair te maken. Onderzoek wees uit dat bagger een groot afvalprobleem vormt voor Nederland, en daarmee tegelijk een unieke kans.":
         "Blauwe Bagger was founded in 2022 after being asked to make a residual stream circular. Research showed that dredged sediment is a major waste problem for the Netherlands, and at the same time a unique opportunity.",
@@ -305,9 +303,9 @@ const i18n = {
       "Het afronden van BlueBox v1 markeert de start van een reeks praktijktesten, die gedurende 2026 op verschillende locaties worden uitgevoerd. Het doel is onze baggerscheidingstechniek te testen en valideren onder operationeel realistische omstandigheden. Na iedere test verbeteren we de installatie iteratief. Samen vormen de tests het fundament voor onze tweede installatie, de BlueBox v2, die de snelheid en volumes aankan waarmee aannemers baggeren.":
         "Completing BlueBox v1 marks the start of practical tests at different locations throughout 2026. We will test and validate our separation technology in realistic operating conditions and improve the installation after every test. Together, the tests form the foundation for BlueBox v2, designed for the speed and volumes at which contractors dredge.",
       "Het eerste project op commerciële schaal laat zien hoe bagger in een realistische projectomgeving wordt gescheiden tot potentieel herbruikbare grondstoffen. Het project beslaat zo'n 10.000 m3 bagger. Pas wanneer een afnemer de stromen heeft toegepast in haar producten is de keten rond en hebben we aangetoond dat de aanpak klaar is voor commerciële toepassing.":
-        "The first project at commercial scale shows how sediment is separated into potentially reusable raw materials in a realistic project environment. The project covers around 10,000 m3 of sediment. The chain is complete only when a buyer has used the streams in its products and we have shown that the approach is ready for commercial use.",
+        "The first project at commercial scale shows how sediment is separated into potentially reusable circular materials in a realistic project environment. The project covers around 10,000 m3 of sediment. The chain is complete only when a buyer has used the streams in its products and we have shown that the approach is ready for commercial use.",
       "Het eerste project op commerciële schaal laat zien hoe bagger in een realistische projectomgeving wordt gescheiden tot herbruikbare grondstoffen. Pas wanneer een afnemer de stromen heeft toegepast in haar producten is de keten rond en is de aanpak klaar voor commerciële toepassing.":
-        "The first project at commercial scale shows how sediment is separated into reusable raw materials in a realistic project environment. The chain is complete only when a buyer has used the streams in its products and the approach is ready for commercial use.",
+        "The first project at commercial scale shows how sediment is separated into reusable circular materials in a realistic project environment. The chain is complete only when a buyer has used the streams in its products and the approach is ready for commercial use.",
       "Van losse projecten naar structurele capaciteit. We breiden uit naar meer locaties en grotere volumes, zodat circulair verwerkte bagger de norm wordt in plaats van de uitzondering.":
         "From individual projects to structural capacity. We are expanding to more locations and larger volumes so that circularly processed sediment becomes the norm rather than the exception.",
       "Van losse projecten groeien we naar structurele capaciteit, meer locaties en grotere volumes, zodat circulair verwerkte bagger de norm wordt in plaats van de uitzondering.":
@@ -315,24 +313,24 @@ const i18n = {
       "Op de lange termijn reikt onze impact verder dan de baggerindustrie. Dezelfde problematiek speelt in tal van andere industriele sectoren. Wij zien een wereld voor ons waarin kritisch wordt gekeken naar elke vorm van afval, om de waarde te erkennen die er nog in zit. Om meer impact te maken richten wij ons vizier daarom ook buiten de baggerindustrie.":
         "In the long term, our impact reaches beyond dredging. The same challenge exists in many other industries. We imagine a world that looks critically at every form of waste and recognises the value still contained in it. To increase our impact, we are therefore also looking beyond dredging.",
       "Op de lange termijn reikt onze impact verder dan de baggerindustrie. Dezelfde problematiek speelt in andere industriele sectoren, waar afvalstromen eveneens waardevolle grondstoffen kunnen worden.":
-        "In the long term, our impact reaches beyond dredging. The same challenge exists in other industries, where waste streams can also become valuable raw materials.",
+        "In the long term, our impact reaches beyond dredging. The same challenge exists in other industries, where waste streams can also become valuable circular materials.",
       "Onze stip op de horizon: een industrie waarin afval niet langer bestaat, maar wordt gezien als grondstof die nog een bestemming zoekt. Wat in de baggersector begint, groeit uit tot een blauwdruk voor de gehele Nederlandse industrie.":
-        "Our horizon: an industry in which waste no longer exists, but is seen as a raw material looking for its next use. What starts in dredging can grow into a blueprint for the entire Dutch industry.",
+        "Our horizon: an industry in which waste no longer exists, but is seen as circular material looking for its next use. What starts in dredging can grow into a blueprint for the entire Dutch industry.",
       "Het startpunt van Blauwe Bagger: bouwen aan een circulaire route voor baggerstromen.":
         "The starting point for Blauwe Bagger: building a circular route for dredged sediment streams.",
       "De BluePrint-aanpak wordt beschikbaar voor de markt.": "The BluePrint approach becomes available to the market.",
       "Het doel: grondstoffen blijven in gebruik binnen een circulaire Nederlandse industrie.":
-        "The goal: keeping raw materials in use within a circular Dutch industry.",
+        "The goal: keeping circular materials in use within a circular Dutch industry.",
       "De oplossing": "The solution",
       "De circulaire keten begint in een": "The circular chain starts in a",
       container: "container",
       "Waar anderen afval zien, zien wij grondstof. Onze mobiele verwerkingsunit zuivert, scheidt en verwerkt baggerspecie direct op locatie - zonder dat er eerst vele kilometers gereden hoeft te worden.":
-        "Where others see waste, we see raw material. Our mobile processing unit purifies, separates and processes dredged sediment directly on site, without first driving many kilometres.",
+        "Where others see waste, we see circular material. Our mobile processing unit purifies, separates and processes dredged sediment directly on site, without first driving many kilometres.",
       "Indikken op locatie": "Dewatering on site",
       "Kies je route binnen Blauwe Bagger": "Choose your route within Blauwe Bagger",
       "Kies je route binnen": "Choose your route within",
       "Een route voor baggerprojecten en een route voor secundaire grondstoffen.":
-        "One route for dredging projects and one route for secondary raw materials.",
+        "One route for dredging projects and one route for secondary circular materials.",
       "Voor bagger industrie": "For dredging industry",
       "Voor de baggerindustrie": "For dredging industry",
       "Werken met de BlueBox": "Work with the BlueBox",
@@ -342,8 +340,8 @@ const i18n = {
       "Minder stortkosten, minder transport en sterker in aanbestedingen. De BlueBox scheidt bagger direct op locatie.":
         "Lower disposal costs, less transport and a stronger position in tenders. The BlueBox separates dredged sediment directly on site.",
       "Voor de bouw": "For construction",
-      "Secundaire grondstoffen, primaire kwaliteit": "Secondary raw materials, primary quality",
-      "Secundaire grondstoffen voor de bouw": "Secondary raw materials for construction",
+      "Secundaire grondstoffen, primaire kwaliteit": "Secondary circular materials, primary quality",
+      "Secundaire grondstoffen voor de bouw": "Secondary circular materials for construction",
       "BlueSand, BlueFiller en BlueCalc als duurzame input voor de bouw.":
         "BlueSand, BlueFiller and BlueCalc as sustainable inputs for construction.",
       "BlueSand, BlueFiller en BlueCalc als duurzame input voor betonproductie en wegfunderingen.":
@@ -351,7 +349,7 @@ const i18n = {
       BlueClay: "BlueClay",
       "Geactiveerde kleifractie met een uitzonderlijk fijne deeltjesgrootte. Gewonnen uit gescheiden baggerspecie en nabewerkt tot een consistent, hoogwaardig product.":
         "Activated clay fraction with an exceptionally fine particle size. Recovered from separated dredged sediment and post-processed into a consistent, high-quality product.",
-      "Bekijk grondstoffen": "View raw materials",
+      "Bekijk grondstoffen": "View circular materials",
       "De toepassingen": "Applications",
       Producten: "Products",
       Zand: "Sand",
@@ -403,21 +401,21 @@ const i18n = {
       "De productenpagina staat nu los van services en projecten, zodat je gericht kunt communiceren welke stroom belangrijk is zonder te verdwalen in de rest van de site.":
         "The products page is separate from services and projects, so you can focus on the stream that matters without getting lost in the rest of the site.",
       "Blauwe Bagger is in 2022 opgericht uit een gedeelde passie voor duurzaamheid en circulariteit. Onze oprichters zagen dat er in de baggersector volop kansen liggen voor circulair grondstofgebruik, maar ook dat de complexiteit van de sector die kansen vaak in de weg staat. Sindsdien werken we aan een integrale oplossing voor het circulair hergebruik van baggerspecie, met betrokkenheid van de hele keten.":
-        "Blauwe Bagger was founded in 2022 from a shared passion for sustainability and circularity. Our founders saw many opportunities for circular use of raw materials in dredging, but also saw how the sector's complexity often gets in the way. Since then, we have been working on an integrated solution for circular reuse of dredged sediment, involving the entire chain.",
+        "Blauwe Bagger was founded in 2022 from a shared passion for sustainability and circularity. Our founders saw many opportunities for circular use of materials in dredging, but also saw how the sector's complexity often gets in the way. Since then, we have been working on an integrated solution for circular reuse of dredged sediment, involving the entire chain.",
       "Spreekt het je aan om in een jong en energiek team te werken dat ambitieus is en een sector die rijp is voor verandering radicaal te verbeteren? Bekijk dan onze vacatures":
         "Would you like to work in a young, energetic and ambitious team and radically improve a sector ready for change? Take a look at our vacancies.",
       "Wij bouwen mee aan een wereld waar grondstoffen nooit verloren gaan. Onze passie ligt in het zichtbaar maken van de waarde die in bagger verborgen zit.":
-        "We are helping build a world where raw materials are never lost. Our passion lies in making the value hidden in dredged sediment visible.",
+        "We are helping build a world where materials are never lost. Our passion lies in making the value hidden in dredged sediment visible.",
       "Afvalstromen vormen een groeiend probleem in een wereld die duurzamer moet opereren. Toch heeft afval een hardnekkig negatieve reputatie: iets dat afgevoerd moet worden, niet benut. Terwijl er enorm veel potentieel in schuilt.":
         "Waste streams are a growing problem in a world that must operate more sustainably. Yet waste has a stubbornly negative reputation: something to be removed, not used. Even though it contains enormous potential.",
       "Het benutten van afval als grondstof is complex. Variabiliteit, verontreiniging en sociale perceptie vormen barrieres, en geen enkele stroom is hetzelfde. Wie variatie systematisch in kaart brengt en koppelt aan de juiste bewerkingsstappen, slaat de brug tussen afval en grondstof.":
-        "Using waste as a raw material is complex. Variability, contamination and social perception create barriers, and no stream is the same. Mapping variation systematically and connecting it to the right processing steps bridges the gap between waste and raw material.",
+        "Using waste as circular material is complex. Variability, contamination and social perception create barriers, and no stream is the same. Mapping variation systematically and connecting it to the right processing steps bridges the gap between waste and circular material.",
       "We starten in de baggerindustrie, waar de noodzaak tot verduurzaming groot is. Door slim gebruik te maken van data uit waterbodemonderzoeken maken wij inzichtelijk waar bagger waardevol kan worden ingezet en creeren we nieuwe ketens.":
         "We start in dredging, where the need for sustainability is great. By making smart use of sediment survey data, we show where dredged material can create value and build new chains.",
       "Afvalstromen vormen een groeiend probleem in een wereld die duurzamer moet opereren. Toch heeft afval een hardnekkig negatieve reputatie, iets dat afgevoerd moet worden, niet benut. Terwijl er enorm veel potentieel in schuilt.":
         "Waste streams are a growing problem in a world that must operate more sustainably. Yet waste has a stubbornly negative reputation, something to be removed rather than used. Even though it contains enormous potential.",
       "Het benutten van afval als grondstof is complex. Variabiliteit, verontreiniging en sociale perceptie vormen barrieres, en geen enkele stroom is hetzelfde. Dat vraagt om een andere manier van kijken en werken. Blauwe Bagger ziet daarin geen obstakel, maar een kans: wie variatie systematisch in kaart brengt en koppelt aan de juiste bewerkingsstappen, slaat de brug tussen afval en grondstof.":
-        "Using waste as a raw material is complex. Variability, contamination and social perception create barriers, and no stream is the same. This calls for a different way of looking and working. Blauwe Bagger sees an opportunity: mapping variation systematically and connecting it to the right processing steps bridges the gap between waste and raw material.",
+        "Using waste as circular material is complex. Variability, contamination and social perception create barriers, and no stream is the same. This calls for a different way of looking and working. Blauwe Bagger sees an opportunity: mapping variation systematically and connecting it to the right processing steps bridges the gap between waste and circular material.",
       "We starten in de baggerindustrie, een sector die decennialang kampt met structurele uitdagingen en waar de noodzaak tot verduurzaming groot is. Door slim gebruik te maken van data uit waterbodemonderzoeken maken wij inzichtelijk waar bagger wel waardevol kan worden ingezet. Zo creeren we nieuwe ketens die voorheen onzichtbaar bleven.":
         "We start in dredging, a sector that has faced structural challenges for decades and where the need for sustainability is great. By making smart use of sediment survey data, we show where dredged material can create value. In doing so, we create new chains that were previously invisible.",
       "Blauwe Bagger, gevestigd aan Monumentenwerf, Santoriniweg 27, 1045 AV Amsterdam, is verantwoordelijk voor de verwerking van persoonsgegevens zoals weergegeven in deze privacyverklaring.":
@@ -445,7 +443,7 @@ const i18n = {
       "Eigenaar login": "Owner login",
       "Word een partner": "Become a partner",
       "Van baggerstroom naar herbruikbare grondstof.":
-        "From dredged sediment to reusable raw material.",
+        "From dredged sediment to reusable circular material.",
       "Voor baggerindustrie": "For the dredging industry",
       "Voor bagger industrie": "For the dredging industry",
       "Voor de baggerindustrie": "For the dredging industry",
@@ -466,7 +464,7 @@ const i18n = {
       "Type vraag *": "Question type *",
       "Kies een onderwerp": "Choose a subject",
       "Project of pilot": "Project or pilot",
-      Grondstoffen: "Raw materials",
+      Grondstoffen: "Circular materials",
       Samenwerking: "Collaboration",
       Sollicitatie: "Job application",
       Anders: "Other",
@@ -484,7 +482,7 @@ const i18n = {
       // Services and products
       "Kies je route binnen Blauwe Bagger": "Choose your route within Blauwe Bagger",
       "Een route voor baggerprojecten en een route voor secundaire grondstoffen.":
-        "One route for dredging projects and one route for secondary raw materials.",
+        "One route for dredging projects and one route for secondary circular materials.",
       "Services voor de Baggerindustrie": "Services for the dredging industry",
       "Services voor de baggerindustrie": "Services for the dredging industry",
       "Slimmer baggeren begint met beter inzicht": "Smarter dredging starts with better insight",
@@ -505,8 +503,8 @@ const i18n = {
       Tool: "Tool",
       "Wat levert het op?": "What does it deliver?",
       "Kernpunten producten": "Product highlights",
-      "Vorige grondstof": "Previous raw material",
-      "Volgende grondstof": "Next raw material",
+      "Vorige grondstof": "Previous circular material",
+      "Volgende grondstof": "Next circular material",
       "BlueBox bediening op locatie": "BlueBox operation on site",
       "Vergelijking traditionele baggeraanpak en Blauwe Bagger":
         "Comparison of traditional dredging and Blauwe Bagger",
@@ -523,16 +521,17 @@ const i18n = {
       Beperkt: "Limited",
       "Volledig data-gedreven": "Fully data-driven",
       "Duurzaamheidsscore": "Sustainability score",
-      "In ontwikkeling: data analyse is beschikbaar": "In development: data analysis is available",
-      "Grondstoffen voor de bouw": "Raw materials for construction",
+      "Hoog": "High",
+      "Laag": "Low",
+      "Grondstoffen voor de bouw": "Circular materials for construction",
       "De bouwsector staat onder druk: grondstoffen worden schaarser, duurzaamheidseisen strenger en inkoopketens kwetsbaarder.":
-        "The construction sector is under pressure: raw materials are becoming scarcer, sustainability requirements are stricter and supply chains are more vulnerable.",
+        "The construction sector is under pressure: materials are becoming scarcer, sustainability requirements are stricter and supply chains are more vulnerable.",
       "De bouwsector staat onder druk: grondstoffen worden schaarser, duurzaamheidseisen strenger en inkoopketens kwetsbaarder. Blauwe Bagger biedt een alternatief: duurzame grondstoffen van hoge kwaliteit, gewonnen uit bagger en klaargemaakt voor directe inzet in productie van onder andere bakstenen en beton.":
-        "The construction sector is under pressure: raw materials are becoming scarcer, sustainability requirements are stricter and supply chains are more vulnerable. Blauwe Bagger offers an alternative: high-quality sustainable raw materials recovered from dredged sediment and prepared for direct use in products such as bricks and concrete.",
+        "The construction sector is under pressure: materials are becoming scarcer, sustainability requirements are stricter and supply chains are more vulnerable. Blauwe Bagger offers an alternative: high-quality sustainable circular materials recovered from dredged sediment and prepared for direct use in products such as bricks and concrete.",
       "Ons aanbod": "Our offer",
-      "Secundaire grondstoffen": "Secondary raw materials",
-      "Blader door grondstoffen": "Browse raw materials",
-      "Grondstoffen aanbod": "Raw material offer",
+      "Secundaire grondstoffen": "Secondary circular materials",
+      "Blader door grondstoffen": "Browse circular materials",
+      "Grondstoffen aanbod": "Circular material offer",
       "Geinteresseerd?": "Interested?",
       "Geïnteresseerd?": "Interested?",
       "Gewassen en gezeefde zandfractie, afkomstig uit gescheiden bagger. Geschikt als zandvervanger in betonmengsels. Consistente kwaliteit dankzij onze gecontroleerde scheidings- en nabewerkingsprocessen.":
@@ -544,7 +543,7 @@ const i18n = {
       "Geactiveerde kleifractie met een uitzonderlijk fijne deeltjesgrootte. Gewonnen uit gescheiden baggerspecie en nabewerkt tot een consistent, hoogwaardig product.":
         "Activated clay fraction with an exceptionally fine particle size. Recovered from separated dredged sediment and post-processed into a consistent, high-quality product.",
       "Vraag specificaties aan": "Request specifications",
-      "Terug naar grondstoffen": "Back to raw materials",
+      "Terug naar grondstoffen": "Back to circular materials",
       Productspecificatie: "Product specification",
       Productomschrijving: "Product description",
       "Deeltjesgrootte": "Particle size",
@@ -633,8 +632,6 @@ const i18n = {
       Opschaling: "Scaling up",
       "Eerste project op commerciële schaal": "First project at commercial scale",
       "Commerciële projecten op operationele schaal": "Commercial projects at operational scale",
-      Internationalisering: "Internationalisation",
-      Verbreding: "Expansion",
       Circulariteit: "Circularity",
       "Over ons": "About us",
       Vacatures: "Vacancies",
@@ -715,17 +712,17 @@ const i18n = {
     },
     html: {
       "hero-subtitle":
-        'Every stream is a new chapter in <em>circular</em> raw material use.',
+        'Every stream is a new chapter in <em>circular</em> material use.',
       "mission-copy":
-        'Blauwe Bagger works toward a world where raw materials are never lost. We turn dredged sediment into usable raw materials that contribute to a <span class="home-mission-accent wave-underline">circular future.</span>',
+        '<strong>Blauwe Bagger</strong> works toward a world where materials are never lost. We turn dredged sediment into usable circular materials that contribute to a <span class="home-mission-accent wave-underline">circular future.</span>',
       "problem-dredging":
         'With a total volume of tens of millions of m<sup>3</sup> per year, dredged sediment is <strong>the largest waste stream</strong> in the Netherlands. Because of contamination and changing composition, there are few solutions that use its value. As a result, sediment is often dumped in depots, <em>an expensive and unsustainable solution.</em>',
       "problem-concrete":
-        'At the same time, the construction sector extracts hundreds of millions of tonnes of <strong>primary raw materials</strong> every year to produce concrete. That makes it one of the <em>most polluting industries in the world</em>; globally, <strong>8% of CO<sub>2</sub> emissions</strong> come from construction and concrete. The pressure to become more sustainable is growing fast.',
+        'At the same time, the construction sector extracts hundreds of millions of tonnes of <strong>primary construction materials</strong> every year to produce concrete. That makes it one of the <em>most polluting industries in the world</em>; globally, <strong>8% of CO<sub>2</sub> emissions</strong> come from construction and concrete. The pressure to become more sustainable is growing fast.',
       "problem-meter-dredging":
         '<span class="home-problem-meter__label"><span data-count="40">0</span> million m<sup>3</sup></span><span class="home-problem-meter__context">dredged sediment per year</span>',
       "problem-meter-concrete":
-        '<span class="home-problem-meter__label"><span data-count="30">0</span> billion tons</span><span class="home-problem-meter__context">primary raw materials</span>',
+        '<span class="home-problem-meter__label"><span data-count="30">0</span> billion tons</span><span class="home-problem-meter__context">primary construction materials</span>',
     },
   },
 };
@@ -785,7 +782,7 @@ const localizedProcessSteps = {
     },
     {
       label: "Step 04",
-      title: "Applying as raw material",
+      title: "Applying as circular material",
       copy: "Sand, loam, clay and organic material return to projects instead of being lost.",
       image: "assets/media/truck.png",
       transform: "translate(-22%, 2%) scale(1.18)",
@@ -937,11 +934,11 @@ function applyPageSpecificEnglishContent() {
   if (document.body.dataset.page === "over-ons") {
     setHtml(
       ".about-story-text",
-      "Blauwe Bagger was founded in 2022 from a shared passion for sustainability and circularity. Our founders saw many opportunities for circular use of raw materials in dredging, but also saw how the sector's complexity often gets in the way. Since then, we have been working on an integrated solution for circular reuse of dredged sediment, involving the entire chain.",
+      "Blauwe Bagger was founded in 2022 from a shared passion for sustainability and circularity. Our founders saw many opportunities for circular use of materials in dredging, but also saw how the sector's complexity often gets in the way. Since then, we have been working on an integrated solution for circular reuse of dredged sediment, involving the entire chain.",
     );
     setHtml(
       ".about-statement",
-      'We are helping build a world where raw materials <em class="about-statement-accent wave-underline">are never lost</em>. Our passion lies in making the <strong>value</strong> hidden in dredged sediment visible.',
+      'We are helping build a world where materials <em class="about-statement-accent wave-underline">are never lost</em>. Our passion lies in making the <strong>value</strong> hidden in dredged sediment visible.',
     );
     setHtml(
       ".about-work-card p",
@@ -950,7 +947,7 @@ function applyPageSpecificEnglishContent() {
     const planCopy = document.querySelectorAll(".about-plan-copy p");
     [
       "Waste streams are a growing problem in a world that must operate more sustainably. Yet waste has a stubbornly negative reputation: something to be removed rather than used. <em>Even though it contains enormous potential.</em>",
-      "Using waste as a raw material is complex. Variability, contamination and social perception create barriers, and no stream is the same. Mapping variation systematically and connecting it to the right processing steps <em>bridges the gap between waste and raw material.</em>",
+      "Using waste as circular material is complex. Variability, contamination and social perception create barriers, and no stream is the same. Mapping variation systematically and connecting it to the right processing steps <em>bridges the gap between waste and circular material.</em>",
       "We start in dredging, where the need for sustainability is great. By making smart use of <strong>sediment survey data</strong>, we show where dredged material can create value and build new chains.",
     ].forEach((copy, index) => {
       if (planCopy[index]) {
@@ -966,7 +963,7 @@ function applyPageSpecificEnglishContent() {
     );
     setHtml(
       ".plan-intro-body",
-      "Using waste as a raw material is complex. Variability, contamination and social perception create barriers, and no stream is the same. This calls for a different way of looking and working. Blauwe Bagger sees an opportunity: mapping variation systematically and connecting it to the right processing steps <em>bridges the gap between waste and raw material.</em>",
+      "Using waste as circular material is complex. Variability, contamination and social perception create barriers, and no stream is the same. This calls for a different way of looking and working. Blauwe Bagger sees an opportunity: mapping variation systematically and connecting it to the right processing steps <em>bridges the gap between waste and circular material.</em>",
     );
     setHtml(
       ".plan-intro-support",
@@ -1170,6 +1167,8 @@ function arrangeFooterSocialLinks() {
   document.querySelectorAll("body:not(.project-builder-admin) .site-footer").forEach((footer) => {
     footer.querySelectorAll('a[href*="instagram.com"]').forEach((link) => link.remove());
     footer.querySelectorAll('a[href="/privacy-policy"], a[href="/privacy-policy.html"]').forEach((link) => link.remove());
+    footer.querySelectorAll('a[href="/login"], a[href="/login.html"]').forEach((link) => link.remove());
+    footer.querySelectorAll('a[href="/services"], a[href^="/services/"]').forEach((link) => link.remove());
 
     const linkedin = footer.querySelector('a[href*="linkedin.com"]');
     const footerColumns = footer.querySelectorAll(".home-footer-column");
@@ -1266,8 +1265,8 @@ function updateAboutStatementScrollSequence() {
     return;
   }
 
-  const sequenceEnabled =
-    window.innerWidth > 1000 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Keep the statement copy static; only the plan timeline uses scroll-driven motion.
+  const sequenceEnabled = false;
 
   if (isAboutJumpNavigationActive()) {
     aboutStatementText.style.removeProperty("--about-statement-y");
@@ -1346,11 +1345,8 @@ function updateTeamScrollSequence() {
     return;
   }
 
-  const sequenceEnabled =
-    window.innerWidth > 1000 &&
-    window.innerHeight >= 680 &&
-    !isAboutJumpNavigationActive() &&
-    !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Team cards remain visible and stable; scroll-driven animation is reserved for the timeline.
+  const sequenceEnabled = false;
 
   if (!sequenceEnabled) {
     teamStory.classList.remove("is-scroll-enabled");
@@ -1409,7 +1405,7 @@ function syncPlanTimelineScale() {
   // gaps, while keeping the displayed years attached to their matching dots.
   const steps = Array.from(planTimelineSteps);
   const timelineStart = 7;
-  const timelineEnd = 93;
+  const timelineEnd = 88;
   const stepSpacing = (timelineEnd - timelineStart) / Math.max(steps.length - 1, 1);
 
   planTimelineAxis.style.setProperty("--timeline-start", `${timelineStart}%`);
@@ -2319,6 +2315,14 @@ applyPageLanguage();
 moveFooterCompanyIds();
 arrangeFooterSocialLinks();
 
+// Start fetching every hero clip immediately. The markup already opts into
+// browser preloading; this eager pass also covers dynamically swapped clips
+// and prevents the first visit from waiting for an idle callback before the
+// later snippets begin downloading.
+if (heroVideos.length > 1) {
+  heroVideos.forEach((video) => preloadHeroVideo(video));
+}
+
 playHeroClip();
 
 if (baggerWidget) {
@@ -2710,6 +2714,7 @@ async function hydratePublicTeam(grid) {
             <img src="${escapePublicContent(item.image)}" alt="${escapePublicContent(item.name)}" loading="lazy" decoding="async" />
             <h3>${escapePublicContent(item.name)}</h3>
             <p>${escapePublicContent(item.role)}</p>
+            ${item.linkedin ? `<a class="about-team-card__linkedin" href="${escapePublicContent(item.linkedin)}" target="_blank" rel="noreferrer noopener">LinkedIn</a>` : ""}
           </article>
         `,
       )

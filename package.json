@@ -1,9 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "start": "node local-server.js"
+    "start": "node local-server.js",
+    "migrate:blobs": "node scripts/migrate-vercel-blob-to-netlify.mjs"
   },
   "dependencies": {
+    "@netlify/blobs": "^10.7.11",
     "@vercel/blob": "latest"
   }
 }

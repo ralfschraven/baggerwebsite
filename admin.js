@@ -614,6 +614,7 @@ function teamItemToForm(item) {
   teamForm.dataset.editingSlug = item.slug || "";
   teamForm.elements.namedItem("name").value = item.name || "";
   teamForm.elements.namedItem("role").value = item.role || "";
+  teamForm.elements.namedItem("linkedin").value = item.linkedin || "";
   teamForm.elements.namedItem("image").value = item.image || "";
 
   const preview = teamForm.querySelector("[data-team-photo-preview]");
@@ -702,6 +703,7 @@ function initTeamAdmin() {
         body: JSON.stringify({
           name: formData.get("name"),
           role: formData.get("role"),
+          linkedin: formData.get("linkedin"),
           image: formData.get("image"),
         }),
       });
