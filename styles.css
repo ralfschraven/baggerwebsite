@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 :root {
   color-scheme: light;
@@ -20,8 +20,8 @@
   --radius: 8px;
   --shadow: 0 22px 70px rgba(14, 24, 55, 0.16);
   --header-height: 74px;
-  /* Typography contract: Inter for H1/display titles, Poppins everywhere else. */
-  --font-h1: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* Typography contract: Poppins is used consistently for titles and body copy. */
+  --font-h1: "Poppins", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-h1-weight: 300;
   --font-body: "Poppins", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-sans: var(--font-body);
@@ -4485,7 +4485,7 @@ body.has-project-static-detail > .site-footer {
 }
 
 .project-static-page .detail-title em {
-  font-family: "DM Serif Display", serif;
+  font-family: var(--font-h1);
   font-style: italic;
   font-weight: 400;
 }
@@ -4520,7 +4520,7 @@ body.has-project-static-detail > .site-footer {
 }
 
 .project-static-page .section-title em {
-  font-family: "DM Serif Display", serif;
+  font-family: var(--font-h1);
   font-style: italic;
 }
 
@@ -4557,7 +4557,7 @@ body.has-project-static-detail > .site-footer {
   display: block;
   margin-bottom: 6px;
   color: var(--project-blue);
-  font-family: "DM Serif Display", serif;
+  font-family: var(--font-h1);
   font-size: 36px;
   font-style: italic;
   font-weight: 400;
@@ -18683,7 +18683,7 @@ body[data-page="projecten"]:not(:has([data-project-admin])) .project-board-card:
   color: #ffffff;
 }
 
-/* Project overview titles follow the site's lightweight Inter display style. */
+/* Project overview titles follow the site's lightweight Poppins display style. */
 body[data-page="projecten"]:not(:has([data-project-admin])) .project-board-row__label,
 body[data-page="projecten"]:not(:has([data-project-admin])) .project-board-card h3 {
   font-family: var(--font-h1);
@@ -24354,7 +24354,7 @@ body.has-vacancy-preview-fullscreen {
   }
 }
 
-/* Project block headings follow the slim Inter title treatment used by the
+/* Project block headings follow the slim Poppins title treatment used by the
    rest of the site. Keep this shared override in one place so every block,
    including the builder preview, stays consistent. */
 body[data-page="projecten"] .project-builder-page :is(h2, h3) {
@@ -24484,6 +24484,50 @@ body[data-page="over-ons"] .about-partners-list img.is-hovered {
 
 body[data-page="over-ons"] .about-partners-list img {
   transition: filter 180ms ease, opacity 180ms ease;
+}
+
+/* Partner marquees use one stable, colour logo source. Keep the logos quiet
+   until the visitor points at or focuses a card, rather than swapping image
+   files mid-animation. Both marquees pause while a card is being inspected. */
+body[data-page="home"] .home-partner-strip {
+  background: var(--home-cohesive-warm, #f3f0e7) !important;
+}
+
+body[data-page="home"] .home-partner-strip__marquee:hover .home-partner-strip__track,
+body[data-page="home"] .home-partner-strip__marquee:focus-within .home-partner-strip__track,
+body[data-page="over-ons"] .about-partners-marquee:hover .about-partners-track,
+body[data-page="over-ons"] .about-partners-marquee:focus-within .about-partners-track {
+  animation-play-state: paused !important;
+}
+
+body[data-page="home"] .home-partner-strip__list li > a {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+body[data-page="home"] .home-partner-strip__list li > a:focus-visible {
+  border-radius: 5px;
+  outline: 3px solid rgba(56, 81, 147, 0.42);
+  outline-offset: 4px;
+}
+
+body[data-page="home"] .home-partner-strip__list img,
+body[data-page="over-ons"] .about-partners-list img {
+  opacity: 0.46;
+  filter: saturate(0.45);
+  transition: opacity 220ms ease, filter 220ms ease;
+}
+
+body[data-page="home"] .home-partner-strip__list li:hover img,
+body[data-page="home"] .home-partner-strip__list li:focus-within img,
+body[data-page="over-ons"] .about-partners-list li:hover img,
+body[data-page="over-ons"] .about-partners-list li:focus-within img {
+  opacity: 1;
+  filter: none;
 }
 
 body[data-page="home"] .home-mission-copy p {
@@ -24640,6 +24684,16 @@ body[data-page="over-ons"] .about-story-text {
   line-height: 1.45;
 }
 
+/* Keep the about hero title as one readable phrase instead of splitting
+   "Over" and "ons" into two stacked lines. */
+body[data-page="over-ons"] .about-story-section h1 {
+  display: flex;
+  align-items: baseline;
+  gap: 0.18em;
+  max-width: none;
+  white-space: nowrap;
+}
+
 @media (max-width: 760px) {
   body[data-page="over-ons"] .about-story-section {
     min-height: 88svh;
@@ -24657,6 +24711,7 @@ body[data-page="over-ons"] .about-story-text {
   }
 
   body[data-page="over-ons"] .about-story-section h1 {
+    gap: 0.12em;
     font-size: clamp(3.8rem, 19vw, 6rem);
   }
 
@@ -24664,6 +24719,14 @@ body[data-page="over-ons"] .about-story-text {
     margin-top: 26px;
     font-size: clamp(1rem, 4.35vw, 1.3rem);
     line-height: 1.42;
+  }
+}
+
+@media (max-width: 480px) {
+  body[data-page="over-ons"] .about-story-section h1 {
+    flex-wrap: wrap;
+    max-width: 7ch;
+    white-space: normal;
   }
 }
 
