@@ -10632,7 +10632,14 @@ body[data-page="home"] .site-header:has(.menu-toggle[aria-expanded="true"]) .men
 }
 
 .home-hero-media::before {
-  display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(6, 12, 28, 0.22) 0%, rgba(6, 12, 28, 0.08) 47%, rgba(6, 12, 28, 0.04) 100%),
+    linear-gradient(0deg, rgba(6, 12, 28, 0.16) 0%, rgba(6, 12, 28, 0.03) 44%, rgba(6, 12, 28, 0.08) 100%);
 }
 
 .home-hero-media::after {
