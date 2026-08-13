@@ -24816,6 +24816,16 @@ body:not(.project-builder-admin) .site-footer.site-footer--brand .home-footer-ad
   display: block !important;
 }
 
+/* Keep the supplied Abbe photo visible behind the public about hero. This
+   more-specific rule wins over the older editorial reset that removes hero
+   backgrounds from the about page. */
+body[data-page="over-ons"] .about-page .about-story-section {
+  background:
+    linear-gradient(90deg, rgba(8, 16, 37, 0.42) 0%, rgba(8, 16, 37, 0.16) 56%, rgba(8, 16, 37, 0.05) 100%),
+    linear-gradient(180deg, rgba(8, 16, 37, 0.08), rgba(8, 16, 37, 0.32)),
+    url("/assets/media/about-hero-abbe.jpg") center / cover no-repeat !important;
+}
+
 .about-team-card__linkedin {
   display: inline-flex;
   margin-top: 10px;
