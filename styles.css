@@ -24879,9 +24879,27 @@ body:not(.project-builder-admin) .site-footer.site-footer--brand .home-footer-ad
    very top. Keep this state explicit so later page-specific typography rules
    cannot make the navigation disappear into the background. */
 @media (min-width: 1081px) {
-  body:not([data-page="home"]) .site-header:not(.is-condensed):not(.is-menu-open) .main-nav > a,
-  body:not([data-page="home"]) .site-header:not(.is-condensed):not(.is-menu-open) .nav-dropdown > a,
-  body:not([data-page="home"]) .site-header:not(.is-condensed):not(.is-menu-open) .language-toggle a {
+  body[data-page="contact"] .site-header:not(.is-condensed):not(.is-menu-open) .nav-shell {
+    background: transparent !important;
+    background-image: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  body[data-page="contact"] .site-header:not(.is-condensed):not(.is-menu-open) .main-nav > a,
+  body[data-page="contact"] .site-header:not(.is-condensed):not(.is-menu-open) .nav-dropdown > a,
+  body[data-page="contact"] .site-header:not(.is-condensed):not(.is-menu-open) .language-toggle a {
+    color: #111930 !important;
+  }
+
+  body[data-page="contact"] .site-header:not(.is-condensed):not(.is-menu-open) .nav-dropdown > a::after {
+    border-color: currentColor;
+  }
+
+  body:not([data-page="home"]):not([data-page="contact"]) .site-header:not(.is-condensed):not(.is-menu-open) .main-nav > a,
+  body:not([data-page="home"]):not([data-page="contact"]) .site-header:not(.is-condensed):not(.is-menu-open) .nav-dropdown > a,
+  body:not([data-page="home"]):not([data-page="contact"]) .site-header:not(.is-condensed):not(.is-menu-open) .language-toggle a {
     color: #ffffff !important;
   }
 
