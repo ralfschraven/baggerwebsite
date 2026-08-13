@@ -16639,8 +16639,8 @@ body[data-page="home"] .home-section--mission .home-frame,
 body[data-page="home"] .home-problem-frame,
 body[data-page="home"] .home-approach-frame,
 body[data-page="home"] .home-service-frame {
-  padding-top: clamp(72px, 7vw, 104px);
-  padding-bottom: clamp(72px, 7vw, 104px);
+  padding-top: clamp(48px, 4.5vw, 72px);
+  padding-bottom: clamp(48px, 4.5vw, 72px);
 }
 
 body[data-page="home"] .home-section--mission .home-frame,
@@ -22744,7 +22744,7 @@ body[data-page="home"] .home-service-card h3 {
 /* Give the mission statement enough vertical breathing room to fill the view. */
 @media (min-width: 761px) {
   body[data-page="home"] .home-mission-grid {
-    min-height: clamp(720px, 90svh, 960px);
+    min-height: clamp(560px, 64svh, 720px);
   }
 }
 
