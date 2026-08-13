@@ -20035,7 +20035,7 @@ body[data-page="het-plan"] .plan-intro-head h1 .plan-intro-title-prefix {
   color: #111930;
   font-size: 0.46em;
   font-style: normal;
-  font-weight: 600;
+  font-weight: var(--font-h1-weight);
   letter-spacing: -0.035em;
 }
 
@@ -20411,7 +20411,7 @@ body[data-page="service-detail"] .service-detail-hero__head h1 .service-hero-con
   color: rgba(255, 255, 255, 0.9);
   font-family: var(--font-sans);
   font-size: 0.38em;
-  font-style: italic;
+  font-style: normal;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 0.88;
@@ -21104,6 +21104,10 @@ body[data-page="over-ons"] .about-plan-heading h2 em {
   color: #385193;
   font-style: italic;
   font-weight: 500;
+}
+
+body[data-page="over-ons"] .about-plan-heading h2 .about-plan-title-prefix {
+  font-weight: var(--font-h1-weight);
 }
 
 body[data-page="over-ons"] .about-plan-copy {
@@ -24388,6 +24392,18 @@ body:not([data-page="home"]) .site-header.is-condensed .nav-shell {
   background-image: none !important;
 }
 
+/* Keep the expanded desktop navigation as one continuous pill. A later
+   desktop layout rule used to reset the shell radius to zero, which made the
+   wide dark bar look like a square panel instead of the rounded nav surface. */
+@media (min-width: 1081px) {
+  .nav-shell,
+  body[data-page="home"] .site-header .nav-shell,
+  body:not([data-page="home"]) .site-header .nav-shell,
+  body[data-homepage-variant="bluebox-lab"] .site-header .nav-shell {
+    border-radius: 999px !important;
+  }
+}
+
 /* Keep the open mobile navigation on the same solid dark-blue surface as the
    desktop bar. This also removes the legacy gradient that otherwise appears
    only while the menu is expanded. */
@@ -24402,12 +24418,20 @@ body:not([data-page="home"]) .mobile-menu {
 }
 
 body[data-page="home"] .home-partner-strip__track {
-  animation: none !important;
-  transform: none !important;
+  animation: home-partners-scroll 32s linear infinite !important;
+  transform: translateX(0);
 }
 
 body[data-page="home"] .home-partner-strip__list[aria-hidden="true"] {
-  display: none;
+  display: flex;
+}
+
+body[data-page="home"] .home-partner-strip {
+  background: #ffffff !important;
+}
+
+body[data-page="home"] .home-partner-strip__title {
+  color: #111b3a;
 }
 
 body[data-page="home"] .home-partner-strip__list li {
@@ -24419,6 +24443,47 @@ body[data-page="home"] .home-partner-strip__list li {
 body[data-page="home"] .home-partner-strip__list img {
   opacity: 1;
   filter: none;
+  transition: filter 180ms ease, opacity 180ms ease;
+}
+
+/* Hero pages use the navigation as an overlay again: the shell stays in the
+   layout for alignment, but its rounded surface disappears so the links sit
+   directly over the video/image. The condensed state intentionally keeps its
+   floating pill once the visitor has scrolled away from the hero. */
+@media (min-width: 1081px) {
+  body[data-page="home"] .site-header:not(.is-condensed):not(.is-menu-open) .nav-shell,
+  body[data-page="over-ons"] .site-header:not(.is-condensed):not(.is-menu-open) .nav-shell,
+  body[data-page="service-detail"] .site-header:not(.is-condensed):not(.is-menu-open) .nav-shell,
+  body[data-page="projecten"]:has([data-project-detail]) .site-header:not(.is-condensed):not(.is-menu-open) .nav-shell,
+  body[data-page="projecten"]:has(.project-builder-hero) .site-header:not(.is-condensed):not(.is-menu-open) .nav-shell {
+    background: transparent !important;
+    background-image: none !important;
+    border-color: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  body[data-page="home"] .site-header:not(.is-condensed):not(.is-menu-open) .main-nav a,
+  body[data-page="over-ons"] .site-header:not(.is-condensed):not(.is-menu-open) .main-nav a,
+  body[data-page="service-detail"] .site-header:not(.is-condensed):not(.is-menu-open) .main-nav a,
+  body[data-page="projecten"]:has([data-project-detail]) .site-header:not(.is-condensed):not(.is-menu-open) .main-nav a,
+  body[data-page="projecten"]:has(.project-builder-hero) .site-header:not(.is-condensed):not(.is-menu-open) .main-nav a {
+    background: transparent !important;
+    border-radius: 0 !important;
+  }
+}
+
+/* Partner logos reveal their supplied colour artwork while hovered or focused.
+   The duplicate marquee list uses the same behaviour, so the transition stays
+   consistent as logos loop through the strip. */
+body[data-page="home"] .home-partner-strip__list img.is-hovered,
+body[data-page="over-ons"] .about-partners-list img.is-hovered {
+  filter: none;
+}
+
+body[data-page="over-ons"] .about-partners-list img {
+  transition: filter 180ms ease, opacity 180ms ease;
 }
 
 body[data-page="home"] .home-mission-copy p {
@@ -24514,6 +24579,92 @@ body[data-page="over-ons"] .about-story-text {
 
 body[data-page="over-ons"] .about-team-photo {
   display: none;
+}
+
+/* The about hero follows the same editorial treatment as the service heroes:
+   one full-bleed image, a readable dark wash, and the title anchored at the
+   lower left with its supporting copy directly underneath. */
+body[data-page="over-ons"] .about-story-section {
+  display: grid;
+  min-height: 100svh;
+  padding: clamp(132px, 14vh, 190px) 0 clamp(54px, 8vh, 96px);
+  background-image:
+    linear-gradient(90deg, rgba(8, 16, 37, 0.8) 0%, rgba(8, 16, 37, 0.54) 38%, rgba(8, 16, 37, 0.12) 78%),
+    linear-gradient(180deg, rgba(8, 16, 37, 0.16), rgba(8, 16, 37, 0.66)),
+    url("/assets/media/about-hero-abbe.jpg") !important;
+  background-position: center;
+  background-size: cover;
+}
+
+body[data-page="over-ons"] .about-story-section::before,
+body[data-page="over-ons"] .about-story-section h1::before,
+body[data-page="over-ons"] .about-story-section h1::after {
+  display: none;
+}
+
+body[data-page="over-ons"] .about-story-section .about-frame {
+  display: flex;
+  min-height: calc(100svh - 250px);
+  align-items: flex-end;
+}
+
+body[data-page="over-ons"] .about-story-copy {
+  max-width: min(820px, 76vw);
+  padding-bottom: clamp(8px, 2vh, 24px);
+}
+
+body[data-page="over-ons"] .about-story-section h1 {
+  display: grid;
+  gap: 0.04em;
+  max-width: 8ch;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: clamp(4.4rem, 8vw, 8.4rem);
+  font-weight: 400;
+  letter-spacing: -0.065em;
+  line-height: 0.82;
+}
+
+body[data-page="over-ons"] .about-hero-accent {
+  color: #7892ff;
+  font-weight: 400;
+}
+
+body[data-page="over-ons"] .about-story-text {
+  max-width: 780px;
+  margin-top: clamp(28px, 4vh, 46px);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(1rem, 1.2vw, 1.3rem);
+  font-weight: 520;
+  letter-spacing: -0.015em;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  body[data-page="over-ons"] .about-story-section {
+    min-height: 88svh;
+    padding: 126px 0 42px;
+    background-position: 62% center;
+  }
+
+  body[data-page="over-ons"] .about-story-section .about-frame {
+    min-height: calc(88svh - 168px);
+  }
+
+  body[data-page="over-ons"] .about-story-copy {
+    max-width: none;
+    padding-bottom: 0;
+  }
+
+  body[data-page="over-ons"] .about-story-section h1 {
+    font-size: clamp(3.8rem, 19vw, 6rem);
+  }
+
+  body[data-page="over-ons"] .about-story-text {
+    margin-top: 26px;
+    font-size: clamp(1rem, 4.35vw, 1.3rem);
+    line-height: 1.42;
+  }
 }
 
 body[data-page="over-ons"] .about-team-card img {

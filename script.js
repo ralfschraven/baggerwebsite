@@ -2727,3 +2727,53 @@ async function hydratePublicTeam(grid) {
 
 document.querySelectorAll("[data-public-content]").forEach(hydratePublicContentBoard);
 document.querySelectorAll("[data-team-grid]").forEach(hydratePublicTeam);
+
+/* Keep the lightweight/default partner artwork for the carousel, but preload
+   and reveal the supplied colour artwork on hover or keyboard focus. */
+const partnerHoverVariants = {
+  "tu-delft.png": "/assets/partners/hover/tu-delft.png",
+  "deltares.png": "/assets/partners/hover/deltares.png",
+  "port-of-rotterdam.png": "/assets/partners/hover/port-of-rotterdam.png",
+  "provincie-zuid-holland.png": "/assets/partners/hover/provincie-zuid-holland.png",
+  "wageningen-university-research.png": "/assets/partners/hover/wageningen-university-research.png",
+  "tijhuis-ingenieurs.png": "/assets/partners/hover/tijhuis-ingenieurs.png",
+  "partner-12.png": "/assets/partners/hover/partner-12.png",
+  "partner-13.png": "/assets/partners/hover/partner-13.png",
+  "partner-14.png": "/assets/partners/hover/partner-14.png",
+  "partner-15.png": "/assets/partners/hover/partner-15.png",
+  "partner-16.png": "/assets/partners/hover/partner-16.png",
+  "partner-17.png": "/assets/partners/hover/partner-17.png",
+  "gemeente-amsterdam.png": "/assets/partners/hover/gemeente-amsterdam.png",
+};
+
+document
+  .querySelectorAll(".home-partner-strip__list img, .about-partners-list img")
+  .forEach((image) => {
+    const source = image.getAttribute("src") || "";
+    const fileName = source.split("/").pop();
+    const hoverSource = image.dataset.hoverSrc || partnerHoverVariants[fileName];
+
+    if (!hoverSource) {
+      return;
+    }
+
+    const defaultSource = source;
+    image.dataset.defaultSrc = defaultSource;
+    image.dataset.hoverSrc = hoverSource;
+
+    /* Fetch the colour artwork before it is needed so hover never flashes. */
+    const preload = new Image();
+    preload.src = hoverSource;
+
+    const setHoverState = (active) => {
+      image.src = active ? hoverSource : defaultSource;
+      image.classList.toggle("is-hovered", active);
+    };
+
+    image.addEventListener("pointerenter", () => setHoverState(true));
+    image.addEventListener("pointerleave", () => setHoverState(false));
+
+    const focusTarget = image.closest("a") || image;
+    focusTarget.addEventListener("focus", () => setHoverState(true));
+    focusTarget.addEventListener("blur", () => setHoverState(false));
+  });
