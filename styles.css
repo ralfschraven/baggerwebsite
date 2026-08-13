@@ -24870,7 +24870,8 @@ body:not(.project-builder-admin) .site-footer.site-footer--brand .home-footer-ad
    very top. Keep this state explicit so later page-specific typography rules
    cannot make the navigation disappear into the background. */
 @media (min-width: 1081px) {
-  body[data-page="contact"] .site-header:not(.is-condensed):not(.is-menu-open) .nav-shell {
+  body[data-page="contact"] .site-header:not(.is-condensed):not(.is-menu-open) .nav-shell,
+  body[data-page="projecten"] .site-header:not(.is-condensed):not(.is-menu-open) .nav-shell {
     background: transparent !important;
     background-image: none !important;
     border-color: transparent !important;
@@ -24880,7 +24881,10 @@ body:not(.project-builder-admin) .site-footer.site-footer--brand .home-footer-ad
 
   body[data-page="contact"] .site-header:not(.is-condensed):not(.is-menu-open) .main-nav > a,
   body[data-page="contact"] .site-header:not(.is-condensed):not(.is-menu-open) .nav-dropdown > a,
-  body[data-page="contact"] .site-header:not(.is-condensed):not(.is-menu-open) .language-toggle a {
+  body[data-page="contact"] .site-header:not(.is-condensed):not(.is-menu-open) .language-toggle a,
+  body[data-page="projecten"] .site-header:not(.is-condensed):not(.is-menu-open) .main-nav > a,
+  body[data-page="projecten"] .site-header:not(.is-condensed):not(.is-menu-open) .nav-dropdown > a,
+  body[data-page="projecten"] .site-header:not(.is-condensed):not(.is-menu-open) .language-toggle a {
     color: #111930 !important;
   }
 
@@ -24888,9 +24892,9 @@ body:not(.project-builder-admin) .site-footer.site-footer--brand .home-footer-ad
     border-color: currentColor;
   }
 
-  body:not([data-page="home"]):not([data-page="contact"]) .site-header:not(.is-condensed):not(.is-menu-open) .main-nav > a,
-  body:not([data-page="home"]):not([data-page="contact"]) .site-header:not(.is-condensed):not(.is-menu-open) .nav-dropdown > a,
-  body:not([data-page="home"]):not([data-page="contact"]) .site-header:not(.is-condensed):not(.is-menu-open) .language-toggle a {
+  body:not([data-page="home"]):not([data-page="contact"]):not([data-page="projecten"]) .site-header:not(.is-condensed):not(.is-menu-open) .main-nav > a,
+  body:not([data-page="home"]):not([data-page="contact"]):not([data-page="projecten"]) .site-header:not(.is-condensed):not(.is-menu-open) .nav-dropdown > a,
+  body:not([data-page="home"]):not([data-page="contact"]):not([data-page="projecten"]) .site-header:not(.is-condensed):not(.is-menu-open) .language-toggle a {
     color: #ffffff !important;
   }
 
