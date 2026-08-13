@@ -24508,6 +24508,36 @@ body[data-page="over-ons"] .about-partners-marquee:focus-within .about-partners-
   animation-play-state: paused !important;
 }
 
+/* Keep the marquee edges soft without a visible shadow band. The cards remain
+   clean white surfaces, while the longer mask fade lets them dissolve into
+   the sand background naturally at either edge. */
+body[data-page="home"] .home-partner-strip__marquee,
+body[data-page="over-ons"] .about-partners-marquee {
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.7) 8%,
+    #000 15%,
+    #000 85%,
+    rgba(0, 0, 0, 0.7) 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.7) 8%,
+    #000 15%,
+    #000 85%,
+    rgba(0, 0, 0, 0.7) 92%,
+    transparent 100%
+  );
+}
+
+body[data-page="home"] .home-partner-strip__list li,
+body[data-page="over-ons"] .about-partners-list li {
+  box-shadow: none !important;
+}
+
 body[data-page="home"] .home-partner-strip__list li > a {
   display: grid;
   width: 100%;
@@ -24796,4 +24826,51 @@ body:not(.project-builder-admin) .site-footer.site-footer--brand .home-footer-ad
   font-weight: 650;
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+/* Keep the large editorial titles on every public page in the same Poppins
+   treatment.  These selectors cover the title blocks used by the homepage,
+   services, plan, team, and projects views without changing body copy. */
+:where(
+  .home-mission-copy p,
+  .home-mission-copy h2,
+  .home-kicker,
+  .home-approach-heading,
+  .home-approach-lede,
+  .home-approach-head .home-kicker,
+  .home-service-head h2,
+  .home-prefooter-cta h2,
+  .home-prefooter-cta__eyebrow,
+  .home-blueprint-head p,
+  .home-blueprint-head h1,
+  .home-blueprint-head h2,
+  .service-detail-hero__head h1,
+  .service-detail-kicker,
+  .material-offer-head h2,
+  .material-offer-head p,
+  .service-route-copy h2,
+  .service-route-copy > p,
+  .service-widget-head h2,
+  .service-widget-head > p,
+  .plan-intro-head p,
+  .plan-intro-head h1,
+  .plan-timeline-title,
+  .about-story-section h1,
+  .about-team-section h2,
+  .about-plan-heading > p,
+  .about-plan-heading h2,
+  .project-board-title,
+  .project-static-page .section-title
+) {
+  font-family: var(--font-h1) !important;
+}
+
+:where(
+  .service-detail-hero__head h1,
+  .plan-intro-head h1,
+  .plan-timeline-title,
+  .about-story-section h1,
+  .about-plan-heading h2
+) :is(span, em, strong) {
+  font-family: inherit !important;
 }

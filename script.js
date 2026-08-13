@@ -75,11 +75,6 @@ const heroVideoClips = [
   {
     videoIndex: 1,
     start: 0,
-    end: 2.5,
-  },
-  {
-    videoIndex: 2,
-    start: 0,
     end: 4,
   },
 ];
