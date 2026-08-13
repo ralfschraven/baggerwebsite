@@ -10613,10 +10613,7 @@ body[data-page="home"] .site-header:has(.menu-toggle[aria-expanded="true"]) .men
   inset: 0;
   z-index: -2;
   overflow: hidden;
-  background:
-    linear-gradient(90deg, rgba(6, 12, 28, 0.74) 0%, rgba(6, 12, 28, 0.28) 47%, rgba(6, 12, 28, 0.2) 100%),
-    linear-gradient(0deg, rgba(6, 12, 28, 0.66) 0%, rgba(6, 12, 28, 0.1) 44%, rgba(6, 12, 28, 0.32) 100%),
-    url("assets/media/home-hero-aerial.jpg") center 44% / cover no-repeat;
+  background: url("assets/media/home-hero-aerial.jpg") center 44% / cover no-repeat;
 }
 
 .home-hero-video {
@@ -10635,13 +10632,7 @@ body[data-page="home"] .site-header:has(.menu-toggle[aria-expanded="true"]) .men
 }
 
 .home-hero-media::before {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  content: "";
-  background:
-    linear-gradient(90deg, rgba(6, 12, 28, 0.74) 0%, rgba(6, 12, 28, 0.28) 47%, rgba(6, 12, 28, 0.2) 100%),
-    linear-gradient(0deg, rgba(6, 12, 28, 0.66) 0%, rgba(6, 12, 28, 0.1) 44%, rgba(6, 12, 28, 0.32) 100%);
+  display: none;
 }
 
 .home-hero-media::after {
