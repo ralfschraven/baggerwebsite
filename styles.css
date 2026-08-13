@@ -24874,3 +24874,18 @@ body:not(.project-builder-admin) .site-footer.site-footer--brand .home-footer-ad
 ) :is(span, em, strong) {
   font-family: inherit !important;
 }
+
+/* The dark header shell needs a light foreground while the page is at the
+   very top. Keep this state explicit so later page-specific typography rules
+   cannot make the navigation disappear into the background. */
+@media (min-width: 1081px) {
+  body:not([data-page="home"]) .site-header:not(.is-condensed):not(.is-menu-open) .main-nav > a,
+  body:not([data-page="home"]) .site-header:not(.is-condensed):not(.is-menu-open) .nav-dropdown > a,
+  body:not([data-page="home"]) .site-header:not(.is-condensed):not(.is-menu-open) .language-toggle a {
+    color: #ffffff !important;
+  }
+
+  body:not([data-page="home"]) .site-header:not(.is-condensed):not(.is-menu-open) .nav-dropdown > a::after {
+    border-color: currentColor;
+  }
+}
