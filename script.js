@@ -946,7 +946,7 @@ function applyPageSpecificEnglishContent() {
     );
     setHtml(
       ".about-statement",
-      'We are helping build a world where materials <em class="about-statement-accent wave-underline">are never lost</em>. Our passion lies in making the <strong>value</strong> hidden in dredged sediment visible.',
+      'We are helping build a world where materials <em class="about-statement-accent wave-underline">are never lost</em>. Our passion lies in making the <strong>value</strong> hidden in dredged sediment <strong>visible</strong>.',
     );
     setHtml(
       ".about-work-card p",
