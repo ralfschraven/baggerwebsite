@@ -21776,7 +21776,7 @@ body[data-page="over-ons"] .about-statement-section {
 
 body[data-page="over-ons"] .about-statement-accent {
   color: #405aa2;
-  font-weight: inherit;
+  font-weight: 700;
 }
 
 body[data-page="over-ons"] .about-statement-accent.wave-underline {
@@ -25234,4 +25234,171 @@ body[data-page="home"] .home-hero-copy h1 .home-hero-accent {
     white-space: normal;
     overflow-wrap: normal;
   }
+}
+
+/* On phones, let the BluePrint timeline behave like a real touch rail. The
+   milestones stay on one continuous line and the active detail card follows
+   the position reached by swiping horizontally. */
+@media (max-width: 680px) {
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-map,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-map {
+    overflow: visible;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-rail,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-rail {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding-bottom: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    touch-action: pan-x;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-axis,
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-years,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-axis,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-years {
+    display: block;
+    width: 720px;
+    min-width: 720px !important;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-axis,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-axis {
+    min-height: 250px;
+    overflow: visible;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-line,
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-travel,
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-progress,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-line,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-travel,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-progress {
+    display: block;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-point {
+    position: absolute;
+    inset: auto;
+    top: 50%;
+    left: var(--timeline-pos);
+    display: grid;
+    min-height: 0;
+    padding: 0;
+    color: #8d9aa8;
+    transform: translate(-50%, -50%);
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point::after,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-point::after {
+    width: 1px;
+    height: clamp(30px, 3.4vw, 48px) !important;
+    margin: 0;
+    background: #d5dde7;
+    content: "";
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point span,
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point--label-left span,
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point--label-right span,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-point span,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-point--label-left span,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-point--label-right span {
+    position: absolute;
+    right: auto;
+    left: 50%;
+    width: max-content;
+    max-width: 150px;
+    color: inherit;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: normal;
+    transform: translateX(-50%);
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point--top span,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-point--top span {
+    top: auto;
+    bottom: calc(100% + clamp(42px, 4.4vw, 60px));
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point--bottom span,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-point--bottom span {
+    top: calc(100% + clamp(42px, 4.4vw, 60px));
+    bottom: auto;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-years,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-years {
+    display: block;
+    min-height: 1.25em;
+    padding-top: 22px;
+  }
+}
+
+/* Keep the About Us team compact on phones so all three columns fit in each
+   row instead of falling back to a two-column or single-column stack. */
+@media (max-width: 760px) {
+  body[data-page="over-ons"] .about-team-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px 8px;
+    margin-top: 36px;
+  }
+
+  body[data-page="over-ons"] .about-team-card {
+    padding: 4px 3px 14px;
+  }
+
+  body[data-page="over-ons"] .about-team-card img {
+    width: 100%;
+    max-width: none;
+  }
+
+  body[data-page="over-ons"] .about-team-card h3 {
+    margin-top: 9px;
+    font-size: clamp(0.7rem, 2.8vw, 0.92rem);
+    line-height: 1.12;
+  }
+
+  body[data-page="over-ons"] .about-team-card p {
+    font-size: clamp(0.62rem, 2.35vw, 0.78rem);
+    line-height: 1.2;
+  }
+}
+
+/* Match the shared single-column footer on the homepage at mobile widths. */
+@media (max-width: 760px) {
+  body[data-page="home"] .site-footer--brand .home-footer-meta {
+    grid-template-columns: minmax(0, 1fr) !important;
+    row-gap: 32px;
+  }
+
+  body[data-page="home"] .site-footer--brand .home-footer-meta > * {
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+  }
+}
+
+/* Keep the desktop milestone labels below the BluePrint heading. The top
+   labels extend upward from the rail, so a shorter offset prevents them from
+   entering the heading row while preserving the rail and card positions. */
+@media (min-width: 1001px) {
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point--top span {
+    bottom: calc(100% + clamp(10px, 1.2vw, 16px));
+  }
+}
+
+/* Match the lighter homepage accent blue in the About Us and service heroes. */
+:is(
+  body[data-page="over-ons"] .about-hero-accent,
+  body[data-page="service-detail"] .service-detail-hero__head h1 .service-hero-accent
+) {
+  color: #6f89e8 !important;
 }

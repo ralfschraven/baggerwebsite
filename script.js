@@ -28,6 +28,7 @@ const blueprintActiveYear = document.querySelector("[data-blueprint-active-year]
 const blueprintActiveTitle = document.querySelector("[data-blueprint-active-title]");
 const blueprintActiveCopy = document.querySelector("[data-blueprint-active-copy]");
 const planTimelineStory = document.querySelector("[data-plan-timeline-story]");
+const planTimelineRail = document.querySelector(".plan-timeline-rail");
 const planTimelineAxis = document.querySelector(".plan-timeline-axis");
 const planTimelineSteps = document.querySelectorAll("[data-plan-timeline-step]");
 const planTimelineYears = document.querySelector(".plan-timeline-years");
@@ -36,6 +37,7 @@ const planActiveYear = document.querySelector("[data-plan-active-year]");
 const planActivePeriod = document.querySelector("[data-plan-active-period]");
 const planActiveTitle = document.querySelector("[data-plan-active-title]");
 const planActiveCopy = document.querySelector("[data-plan-active-copy]");
+let planTimelineSwipeFrame = 0;
 const carousels = document.querySelectorAll("[data-carousel]");
 const baggerWidget = document.querySelector("#bagger-widget");
 const blueHeaderSections = document.querySelectorAll(".home-section--blue, .home-section--blueprint");
@@ -1473,6 +1475,55 @@ function updatePlanTimelineScrollSequence() {
   }
 }
 
+function planTimelineSwipeIsEnabled() {
+  return Boolean(
+    planTimelineRail &&
+      planTimelineSteps.length > 1 &&
+      window.innerWidth <= 680,
+  );
+}
+
+function syncPlanTimelineSwipeSelection() {
+  if (!planTimelineSwipeIsEnabled()) {
+    return;
+  }
+
+  const maxScroll = Math.max(planTimelineRail.scrollWidth - planTimelineRail.clientWidth, 1);
+  const scrollProgress = Math.min(Math.max(planTimelineRail.scrollLeft / maxScroll, 0), 1);
+  const steps = Array.from(planTimelineSteps);
+  const activeIndex = Math.min(
+    Math.round(scrollProgress * (steps.length - 1)),
+    steps.length - 1,
+  );
+  const timelineStart = Number.parseFloat(
+    planTimelineAxis.style.getPropertyValue("--timeline-start") || "7",
+  );
+  const timelineEnd = Number.parseFloat(
+    planTimelineAxis.style.getPropertyValue("--timeline-end") || "88",
+  );
+
+  planTimelineAxis.style.setProperty(
+    "--timeline-scroll-position",
+    `${(timelineStart + (timelineEnd - timelineStart) * scrollProgress).toFixed(3)}%`,
+  );
+
+  const activeStep = steps[activeIndex];
+  if (activeStep && !activeStep.classList.contains("plan-timeline-point--active")) {
+    selectPlanTimelineStep(activeStep);
+  }
+}
+
+function schedulePlanTimelineSwipeSelection() {
+  if (!planTimelineSwipeIsEnabled() || planTimelineSwipeFrame) {
+    return;
+  }
+
+  planTimelineSwipeFrame = window.requestAnimationFrame(() => {
+    planTimelineSwipeFrame = 0;
+    syncPlanTimelineSwipeSelection();
+  });
+}
+
 function updateScrollProgress() {
   const scrollable = document.documentElement.scrollHeight - window.innerHeight;
   const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
@@ -2230,6 +2281,18 @@ function navigateToPlanTimelineStep(step) {
 
   if (!planTimelineScrollIsEnabled()) {
     selectPlanTimelineStep(step);
+
+    if (planTimelineSwipeIsEnabled()) {
+      const steps = Array.from(planTimelineSteps);
+      const stepIndex = steps.indexOf(step);
+      const maxScroll = Math.max(planTimelineRail.scrollWidth - planTimelineRail.clientWidth, 0);
+
+      planTimelineRail.scrollTo({
+        left: maxScroll * (stepIndex / Math.max(steps.length - 1, 1)),
+        behavior: "smooth",
+      });
+    }
+
     return;
   }
 
@@ -2573,6 +2636,9 @@ blueprintSteps.forEach((step) => {
 planTimelineSteps.forEach((step) => {
   step.addEventListener("click", () => navigateToPlanTimelineStep(step));
 });
+
+planTimelineRail?.addEventListener("scroll", schedulePlanTimelineSwipeSelection, { passive: true });
+window.addEventListener("resize", schedulePlanTimelineSwipeSelection);
 
 if (header) {
   syncHeaderOffset();
