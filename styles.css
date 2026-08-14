@@ -21058,7 +21058,22 @@ body[data-page="over-ons"] .about-work-card {
 
 @media (max-width: 520px) {
   body[data-page="over-ons"] .about-team-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 14px;
+    margin-top: 36px;
+  }
+
+  body[data-page="over-ons"] .about-team-card img {
+    max-width: 180px;
+  }
+
+  body[data-page="over-ons"] .about-team-card h3 {
+    margin-top: 10px;
+    font-size: clamp(0.86rem, 4vw, 1rem);
+  }
+
+  body[data-page="over-ons"] .about-team-card p {
+    font-size: 0.8rem;
   }
 }
 
@@ -24773,6 +24788,68 @@ body[data-page="over-ons"] .about-story-section h1 {
 body[data-page="over-ons"] .about-team-card img {
   aspect-ratio: 1;
   border-radius: 50%;
+}
+
+/* Keep the About timeline usable on phones: the rail fits the viewport and
+   the selected milestone card no longer becomes part of a clipped scroller. */
+@media (max-width: 680px) {
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-map {
+    gap: 14px;
+    overflow: visible;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-axis {
+    min-width: 0;
+    min-height: 250px;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point span {
+    max-width: clamp(54px, 16vw, 86px);
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point--top span {
+    bottom: calc(100% + 26px);
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point--bottom span {
+    top: calc(100% + 26px);
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point[data-plan-title="Eerste project op commerciële schaal"]::after {
+    height: 30px;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point[data-plan-title="Eerste project op commerciële schaal"] span {
+    top: calc(100% + 36px);
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-years {
+    min-width: 0;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-feature {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 100%;
+    min-height: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-feature strong {
+    font-size: clamp(2rem, 10vw, 2.6rem);
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-feature h3 {
+    font-size: clamp(1.05rem, 5vw, 1.3rem);
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-feature p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
 }
 
 body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point span,
