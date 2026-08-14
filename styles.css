@@ -24554,7 +24554,7 @@ body[data-page="home"] .home-partner-strip__list li > a:focus-visible {
 body[data-page="home"] .home-partner-strip__list img,
 body[data-page="over-ons"] .about-partners-list img {
   opacity: 0.46;
-  filter: saturate(0.45);
+  filter: grayscale(1);
   transition: opacity 220ms ease, filter 220ms ease;
 }
 

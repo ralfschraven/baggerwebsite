@@ -222,6 +222,8 @@ const i18n = {
       "xxx miljoen m3": "xxx million m3",
       Procesaanpak: "Process approach",
       "Onze Oplossing": "Our Solution",
+      "Een route van baggerstroom naar herbruikbare grondstof.":
+        "A route from dredged sediment to reusable circular material.",
       "Een praktische route van baggerstroom naar herbruikbare grondstof.":
         "A practical route from dredged sediment stream to reusable circular material.",
       "Input scan": "Input scan",
@@ -472,7 +474,7 @@ const i18n = {
         "Your email app will open with the completed request.",
       "Een korte omschrijving van locatie, materiaalstroom en doel is genoeg om de eerste richting te bepalen.":
         "A short description of the location, material stream and goal is enough to set the first direction.",
-      "KVK: 98672088": "Chamber of Commerce: 98672088",
+      "KVK: 98672088": "Kamer van Koophandel: 98672088",
       "BTW: NL868594660B01": "VAT: NL868594660B01",
 
       // Services and products
@@ -623,6 +625,10 @@ const i18n = {
       Oprichting: "Founding",
       "Eerste installatie": "First installation",
       Praktijktesten: "Practical tests",
+      "Voorjaar 2026": "Spring 2026",
+      "Start praktijktesten": "Practical testing begins",
+      "Het afronden van BlueBox v1 markeert de start van praktijktesten op verschillende locaties. Zo testen en valideren we onze baggerscheidingstechniek onder operationeel realistische omstandigheden en verbeteren we de installatie na iedere test.":
+        "Completing BlueBox v1 marks the start of practical testing at several locations. We will test and validate our sediment separation technology under realistic operating conditions and improve the installation after each test.",
       "Commerciële schaal": "Commercial scale",
       "Commerciële projecten": "Commercial projects",
       Opschaling: "Scaling up",
@@ -707,6 +713,10 @@ const i18n = {
       "All rights reserved.": "All rights reserved.",
     },
     html: {
+      "about-plan-title": '<span class="about-plan-title-prefix">The</span> <span>BluePrint</span>',
+      "about-plan-timeline-title": '<span>BluePrint</span> timeline',
+      "about-hero-title": 'About <span class="about-hero-accent">us</span>',
+      "tool-development": "This tool is in development.",
       "hero-subtitle":
         'Every stream is a new chapter in <em>circular</em> material use.',
       "mission-copy":
@@ -1145,8 +1155,8 @@ function moveFooterCompanyIds() {
     const companyIds = document.createElement("div");
     companyIds.className = "home-footer-company-ids";
     const ids = pageLanguage === "en"
-      ? ["Chamber of Commerce: 98672088", "VAT: NL868594660B01"]
-      : ["KVK: 98672088", "BTW: NL868594660B01"];
+      ? ["Kamer van Koophandel: 98672088", "VAT: NL868594660B01"]
+      : ["Kamer van Koophandel: 98672088", "BTW: NL868594660B01"];
 
     ids.forEach((value) => {
       const item = document.createElement("span");
