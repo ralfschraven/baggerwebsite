@@ -401,7 +401,7 @@ const i18n = {
       "De productenpagina staat nu los van services en projecten, zodat je gericht kunt communiceren welke stroom belangrijk is zonder te verdwalen in de rest van de site.":
         "The products page is separate from services and projects, so you can focus on the stream that matters without getting lost in the rest of the site.",
       "Blauwe Bagger is in 2022 opgericht uit een gedeelde passie voor duurzaamheid en circulariteit. Onze oprichters zagen dat er in de baggersector volop kansen liggen voor circulair grondstofgebruik, maar ook dat de complexiteit van de sector die kansen vaak in de weg staat. Sindsdien werken we aan een integrale oplossing voor het circulair hergebruik van baggerspecie, met betrokkenheid van de hele keten.":
-        "Blauwe Bagger was founded in 2022 from a shared passion for sustainability and circularity. Our founders saw many opportunities for circular use of materials in dredging, but also saw how the sector's complexity often gets in the way. Since then, we have been working on an integrated solution for circular reuse of dredged sediment, involving the entire chain.",
+        "Blauwe Bagger was founded in 2022 from a shared passion for sustainability and circularity. We saw many opportunities for circular use of dredged material.",
       "Spreekt het je aan om in een jong en energiek team te werken dat ambitieus is en een sector die rijp is voor verandering radicaal te verbeteren? Bekijk dan onze vacatures":
         "Would you like to work in a young, energetic and ambitious team and radically improve a sector ready for change? Take a look at our vacancies.",
       "Wij bouwen mee aan een wereld waar grondstoffen nooit verloren gaan. Onze passie ligt in het zichtbaar maken van de waarde die in bagger verborgen zit.":
@@ -527,7 +527,7 @@ const i18n = {
       "De bouwsector staat onder druk: grondstoffen worden schaarser, duurzaamheidseisen strenger en inkoopketens kwetsbaarder.":
         "The construction sector is under pressure: materials are becoming scarcer, sustainability requirements are stricter and supply chains are more vulnerable.",
       "De bouwsector staat onder druk: grondstoffen worden schaarser, duurzaamheidseisen strenger en inkoopketens kwetsbaarder. Blauwe Bagger biedt een alternatief: duurzame grondstoffen van hoge kwaliteit, gewonnen uit bagger en klaargemaakt voor directe inzet in productie van onder andere bakstenen en beton.":
-        "The construction sector is under pressure: materials are becoming scarcer, sustainability requirements are stricter and supply chains are more vulnerable. Blauwe Bagger offers an alternative: high-quality sustainable circular materials recovered from dredged sediment and prepared for direct use in products such as bricks and concrete.",
+        "The construction sector is under pressure: materials are becoming scarcer, sustainability requirements are stricter and supply chains are more vulnerable. Blauwe Bagger offers an alternative: high-quality sustainable circular materials recovered from dredged sediment.",
       "Ons aanbod": "Our offer",
       "Secundaire grondstoffen": "Secondary circular materials",
       "Blader door grondstoffen": "Browse circular materials",
@@ -942,7 +942,7 @@ function applyPageSpecificEnglishContent() {
   if (document.body.dataset.page === "over-ons") {
     setHtml(
       ".about-story-text",
-      "Blauwe Bagger was founded in 2022 from a shared passion for sustainability and circularity. Our founders saw many opportunities for circular use of materials in dredging, but also saw how the sector's complexity often gets in the way. Since then, we have been working on an integrated solution for circular reuse of dredged sediment, involving the entire chain.",
+      "Blauwe Bagger was founded in 2022 from a shared passion for sustainability and circularity. We saw many opportunities for circular use of dredged material.",
     );
     setHtml(
       ".about-statement",
