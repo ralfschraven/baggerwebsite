@@ -25386,12 +25386,20 @@ body[data-page="home"] .home-hero-copy h1 .home-hero-accent {
   }
 }
 
-/* Keep the desktop milestone labels below the BluePrint heading. The top
-   labels extend upward from the rail, so a shorter offset prevents them from
-   entering the heading row while preserving the rail and card positions. */
-@media (min-width: 1001px) {
+/* Keep the desktop BluePrint title in its own full-screen row above the
+   milestone labels and rail. */
+@media (min-width: 1001px) and (min-height: 680px) {
+  body[data-page="over-ons"] .about-plan-timeline.is-scroll-enabled .plan-timeline-frame {
+    gap: clamp(84px, 10vh, 104px);
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline.is-scroll-enabled .plan-timeline-title {
+    position: relative;
+    z-index: 2;
+  }
+
   body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point--top span {
-    bottom: calc(100% + clamp(10px, 1.2vw, 16px));
+    bottom: calc(100% + clamp(32px, 3.2vw, 40px));
   }
 }
 
@@ -25449,4 +25457,18 @@ body[data-page="home"] .home-hero-copy h1 .home-hero-accent {
   body[data-page="over-ons"] .about-story-section .about-frame {
     min-height: calc(100svh - 168px);
   }
+}
+
+/* Render the company name in the mission statement like the wordmark. */
+body[data-page="home"] .home-mission-copy .home-mission-brand {
+  white-space: nowrap;
+  font-weight: 800;
+}
+
+body[data-page="home"] .home-mission-copy .home-mission-brand__blue {
+  color: #49538a;
+}
+
+body[data-page="home"] .home-mission-copy .home-mission-brand__black {
+  color: #000000;
 }

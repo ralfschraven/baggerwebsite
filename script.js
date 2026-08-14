@@ -722,7 +722,7 @@ const i18n = {
       "hero-subtitle":
         'Every stream is a new chapter in <em>circular</em> material use.',
       "mission-copy":
-        '<strong>Blauwe Bagger</strong> works toward a world where materials are never lost. We turn dredged sediment into usable circular materials that contribute to a <span class="home-mission-accent wave-underline">circular future.</span>',
+        '<strong class="home-mission-brand"><span class="home-mission-brand__blue">Blauwe</span> <span class="home-mission-brand__black">Bagger</span></strong> works toward a world where materials are never lost. We turn dredged sediment into usable circular materials that contribute to a <span class="home-mission-accent wave-underline">circular future.</span>',
       "problem-dredging":
         'With a total volume of tens of millions of m<sup>3</sup> per year, dredged sediment is <strong>the largest waste stream</strong> in the Netherlands. Because of contamination and changing composition, there are few solutions that use its value. As a result, sediment is often dumped in depots, <em>an expensive and unsustainable solution.</em>',
       "problem-concrete":
