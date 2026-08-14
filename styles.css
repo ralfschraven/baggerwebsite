@@ -24575,6 +24575,10 @@ body[data-page="home"] .home-mission-copy p strong {
   font-weight: 700;
 }
 
+body[data-page="home"] .home-mission-copy .home-mission-accent {
+  font-weight: 700;
+}
+
 body[data-page="home"] .home-hero-copy h1 .home-hero-connector,
 body[data-page="service-detail"] .service-detail-hero__head > p:not(.service-detail-kicker):not(.service-detail-hero__copy) {
   font-style: normal;
