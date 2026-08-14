@@ -25416,3 +25416,25 @@ body[data-page="home"] .home-hero-copy h1 .home-hero-accent {
     overflow-wrap: anywhere;
   }
 }
+
+/* Let the mobile photo heroes fill the full phone viewport instead of
+   exposing the page background beneath the image. */
+@media (max-width: 760px) {
+  body[data-page="service-detail"] .service-detail-hero--bricks,
+  body[data-page="service-detail"] .service-detail-hero--excavating {
+    min-height: 100svh;
+  }
+
+  body[data-page="service-detail"] .service-detail-hero--bricks .service-detail-hero__layout,
+  body[data-page="service-detail"] .service-detail-hero--excavating .service-detail-hero__layout {
+    min-height: calc(100svh - 118px);
+  }
+
+  body[data-page="over-ons"] .about-story-section {
+    min-height: 100svh;
+  }
+
+  body[data-page="over-ons"] .about-story-section .about-frame {
+    min-height: calc(100svh - 168px);
+  }
+}
