@@ -2978,6 +2978,12 @@ body[data-page="producten"] main > :not(.build-screen) {
   gap: clamp(28px, 4vw, 52px);
 }
 
+.plan-timeline-rail {
+  display: grid;
+  gap: inherit;
+  min-width: 0;
+}
+
 .plan-timeline-axis {
   position: relative;
   min-height: clamp(178px, 18vw, 230px);
@@ -24798,15 +24804,30 @@ body[data-page="over-ons"] .about-team-card img {
     overflow: visible;
   }
 
-  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-axis {
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-rail {
+    display: grid;
+    gap: 14px;
+    width: 100%;
     min-width: 0;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-rail > .plan-timeline-axis,
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-rail > .plan-timeline-years {
+    min-width: 780px;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-axis {
     min-height: 250px;
   }
 
   body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point span {
-    max-width: clamp(54px, 16vw, 86px);
+    max-width: 160px;
     white-space: normal;
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
+    word-break: normal;
   }
 
   body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point--top span {
@@ -24823,10 +24844,6 @@ body[data-page="over-ons"] .about-team-card img {
 
   body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point[data-plan-title="Eerste project op commerciële schaal"] span {
     top: calc(100% + 36px);
-  }
-
-  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-years {
-    min-width: 0;
   }
 
   body[data-page="over-ons"] .about-plan-timeline .plan-timeline-feature {
@@ -24849,6 +24866,164 @@ body[data-page="over-ons"] .about-team-card img {
   body[data-page="over-ons"] .about-plan-timeline .plan-timeline-feature p {
     font-size: 0.9rem;
     line-height: 1.5;
+  }
+}
+
+@media (max-width: 680px) {
+  body[data-page="het-plan"] .plan-timeline-map {
+    gap: 14px;
+    overflow: visible;
+  }
+
+  body[data-page="het-plan"] .plan-timeline-rail {
+    gap: 14px;
+    width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
+  }
+
+  body[data-page="het-plan"] .plan-timeline-rail > .plan-timeline-axis,
+  body[data-page="het-plan"] .plan-timeline-rail > .plan-timeline-years {
+    min-width: 780px;
+  }
+
+  body[data-page="het-plan"] .plan-timeline-axis {
+    min-height: 250px;
+  }
+
+  body[data-page="het-plan"] .plan-timeline-point span {
+    max-width: 160px;
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  body[data-page="het-plan"] .plan-timeline-point--top span {
+    bottom: calc(100% + 26px);
+  }
+
+  body[data-page="het-plan"] .plan-timeline-point--bottom span {
+    top: calc(100% + 26px);
+  }
+
+  body[data-page="het-plan"] .plan-timeline-feature {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 100%;
+    min-height: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  body[data-page="het-plan"] .plan-timeline-feature strong {
+    font-size: clamp(2rem, 10vw, 2.6rem);
+  }
+
+  body[data-page="het-plan"] .plan-timeline-feature h3 {
+    font-size: clamp(1.05rem, 5vw, 1.3rem);
+  }
+
+  body[data-page="het-plan"] .plan-timeline-feature p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+/* On phones, use a readable three-column milestone grid instead of forcing
+   seven labels into one horizontal rail. Each milestone remains a button. */
+@media (max-width: 680px) {
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-rail,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-rail {
+    display: block;
+    width: 100%;
+    overflow: visible;
+    padding-bottom: 0;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-axis,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-axis {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px 10px;
+    min-width: 0;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-line,
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-travel,
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-progress,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-line,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-travel,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-progress {
+    display: none;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-point {
+    position: relative;
+    inset: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7px;
+    min-height: 86px;
+    padding: 10px 4px;
+    color: #8d9aa8;
+    transform: none;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point::before,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-point::before {
+    order: 0;
+    flex: 0 0 auto;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point::after,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-point::after {
+    order: 2;
+    width: auto;
+    height: auto !important;
+    margin: 0;
+    color: #a2adba;
+    font-size: 0.72rem;
+    font-weight: 850;
+    line-height: 1;
+    background: transparent;
+    content: attr(data-plan-year);
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point span,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-point span,
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point--label-left span,
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point--label-right span,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-point--label-left span,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-point--label-right span {
+    position: static;
+    order: 1;
+    width: auto;
+    max-width: 100%;
+    color: inherit;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+    transform: none;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point--top span,
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-point--bottom span,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-point--top span,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-point--bottom span {
+    inset: auto;
+  }
+
+  body[data-page="over-ons"] .about-plan-timeline .plan-timeline-years,
+  body[data-page="het-plan"] .plan-timeline-section .plan-timeline-years {
+    display: none;
   }
 }
 
