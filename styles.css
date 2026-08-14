@@ -24480,6 +24480,7 @@ body[data-page="home"] .home-partner-strip__list img {
 @media (min-width: 1081px) {
   body[data-page="home"] .site-header:not(.is-condensed):not(.is-menu-open) .nav-shell,
   body[data-page="over-ons"] .site-header:not(.is-condensed):not(.is-menu-open) .nav-shell,
+  body[data-page="vacatures"] .site-header:not(.is-condensed):not(.is-menu-open) .nav-shell,
   body[data-page="service-detail"] .site-header:not(.is-condensed):not(.is-menu-open) .nav-shell,
   body[data-page="projecten"]:has([data-project-detail]) .site-header:not(.is-condensed):not(.is-menu-open) .nav-shell,
   body[data-page="projecten"]:has(.project-builder-hero) .site-header:not(.is-condensed):not(.is-menu-open) .nav-shell {
@@ -24947,7 +24948,8 @@ body[data-page="over-ons"] .about-team-card img {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px 10px;
-    min-width: 0;
+    width: 100%;
+    min-width: 0 !important;
     min-height: 0;
     overflow: visible;
   }
@@ -25079,7 +25081,7 @@ body[data-page="over-ons"] .about-page .about-story-section {
   background:
     linear-gradient(90deg, rgba(8, 16, 37, 0.42) 0%, rgba(8, 16, 37, 0.16) 56%, rgba(8, 16, 37, 0.05) 100%),
     linear-gradient(180deg, rgba(8, 16, 37, 0.08), rgba(8, 16, 37, 0.32)),
-    url("/assets/media/about-hero-abbe.jpg") center / cover no-repeat !important;
+    url("/assets/media/about-hero-40403.jpg") center / cover no-repeat !important;
 }
 
 .about-team-card__linkedin {
@@ -25197,5 +25199,39 @@ body[data-page="over-ons"] .about-page .about-story-section {
 
   body:not([data-page="home"]) .site-header:not(.is-condensed):not(.is-menu-open) .nav-dropdown > a::after {
     border-color: currentColor;
+  }
+}
+
+/* Keep the homepage hero accent on the lighter blue used in the hero artwork,
+   while the supporting editorial accents use the logo blue. */
+body[data-page="home"] .home-hero-copy h1 .home-hero-accent {
+  color: #6f89e8 !important;
+}
+
+/* Let the longer English homepage hero phrase wrap inside narrow viewports
+   instead of keeping the desktop-sized fit-content heading off-screen. */
+@media (max-width: 760px) {
+  body[data-page="home"] .home-hero-copy {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  body[data-page="home"] .home-hero-copy h1 {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  body[data-page="home"] .home-hero-copy h1 .home-hero-topline,
+  body[data-page="home"] .home-hero-copy h1 .home-hero-accent {
+    justify-self: center;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  body[data-page="home"] .home-hero-copy h1 .home-hero-accent {
+    width: 100%;
+    white-space: normal;
+    overflow-wrap: normal;
   }
 }
