@@ -400,7 +400,7 @@ const i18n = {
         "Would you like to move forward with a specific material stream or application?",
       "De productenpagina staat nu los van services en projecten, zodat je gericht kunt communiceren welke stroom belangrijk is zonder te verdwalen in de rest van de site.":
         "The products page is separate from services and projects, so you can focus on the stream that matters without getting lost in the rest of the site.",
-      "Blauwe Bagger is in 2022 opgericht uit een gedeelde passie voor duurzaamheid en circulariteit. Onze oprichters zagen dat er in de baggersector volop kansen liggen voor circulair grondstofgebruik, maar ook dat de complexiteit van de sector die kansen vaak in de weg staat. Sindsdien werken we aan een integrale oplossing voor het circulair hergebruik van baggerspecie, met betrokkenheid van de hele keten.":
+      "Blauwe Bagger is in 2022 opgericht vanuit een gedeelde passie voor duurzaamheid en circulariteit. We zagen veel kansen voor circulair gebruik van baggerspecie.":
         "Blauwe Bagger was founded in 2022 from a shared passion for sustainability and circularity. We saw many opportunities for circular use of dredged material.",
       "Spreekt het je aan om in een jong en energiek team te werken dat ambitieus is en een sector die rijp is voor verandering radicaal te verbeteren? Bekijk dan onze vacatures":
         "Would you like to work in a young, energetic and ambitious team and radically improve a sector ready for change? Take a look at our vacancies.",
