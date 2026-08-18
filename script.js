@@ -295,7 +295,7 @@ const i18n = {
       "Commerciële projecten": "Commercial projects",
       "Eerste project op commerciële schaal": "First project at commercial scale",
       "Commerciële projecten op operationele schaal": "Commercial projects at operational scale",
-      "Circulariteit in gehele Nederlandse industrie": "Circularity across Dutch industry",
+      "Circulariteit in de Nederlandse industrie": "Circularity across Dutch industry",
       "Blauwe Bagger is in 2022 opgericht, ontstaan vanuit een opdracht om een reststroom circulair te maken. Onderzoek wees uit dat bagger een groot afvalprobleem vormt voor Nederland, en daarmee tegelijk een unieke kans.":
         "Blauwe Bagger was founded in 2022 after being asked to make a residual stream circular. Research showed that dredged sediment is a major waste problem for the Netherlands, and at the same time a unique opportunity.",
       "BlueBox v1 is ontwikkeld als eerste mobiele scheidingsinstallatie. Daarmee leggen we de technische basis om bagger op locatie te ontwateren, te scheiden en klaar te maken voor hergebruik.":
@@ -347,8 +347,8 @@ const i18n = {
       "BlueSand, BlueFiller en BlueCalc als duurzame input voor betonproductie en wegfunderingen.":
         "BlueSand, BlueFiller and BlueCalc as sustainable inputs for concrete production and road foundations.",
       BlueClay: "BlueClay",
-      "Geactiveerde kleifractie met een uitzonderlijk fijne deeltjesgrootte. Gewonnen uit gescheiden baggerspecie en nabewerkt tot een consistent, hoogwaardig product.":
-        "Activated clay fraction with an exceptionally fine particle size. Recovered from separated dredged sediment and post-processed into a consistent, high-quality product.",
+      "Kleifractie met een uitzonderlijk fijne deeltjesgrootte. Gewonnen uit gescheiden baggerspecie en nabewerkt tot een consistent, hoogwaardig product.":
+        "Clay fraction with an exceptionally fine particle size. Recovered from separated dredged sediment and post-processed into a consistent, high-quality product.",
       "Bekijk grondstoffen": "View circular materials",
       "De toepassingen": "Applications",
       Producten: "Products",
@@ -536,12 +536,12 @@ const i18n = {
       "Geïnteresseerd?": "Interested?",
       "Gewassen en gezeefde zandfractie, afkomstig uit gescheiden bagger. Geschikt als zandvervanger in betonmengsels. Consistente kwaliteit dankzij onze gecontroleerde scheidings- en nabewerkingsprocessen.":
         "Washed and screened sand fraction from separated dredged sediment. Suitable as a sand replacement in concrete mixes, with consistent quality thanks to our controlled separation and post-processing.",
-      "Fijnkorrelige kleifractie, nabewerkt tot een hoogwaardig vulmiddel. Inzetbaar als filler in betonproducten waar een fijne deeltjesgrootte gewenst is.":
-        "Fine-grained clay fraction, post-processed into a high-quality filler. Suitable for concrete products where a fine particle size is required.",
+      "Fijnkorrelige zandfractie, nabewerkt tot een hoogwaardig vulmiddel. Inzetbaar als filler in betonproducten waar een fijne deeltjesgrootte gewenst is.":
+        "Fine-grained sand fraction, post-processed into a high-quality filler. Suitable for concrete products where a fine particle size is required.",
       "Gecalcineerd kleiproduct met puzzolane eigenschappen. BlueCalc kan een deel van het cement vervangen in betonmengsels, wat de CO2-voetafdruk van beton verlaagt.":
         "Calcined clay product with pozzolanic properties. BlueCalc can replace part of the cement in concrete mixes, reducing concrete's CO2 footprint.",
-      "Geactiveerde kleifractie met een uitzonderlijk fijne deeltjesgrootte. Gewonnen uit gescheiden baggerspecie en nabewerkt tot een consistent, hoogwaardig product.":
-        "Activated clay fraction with an exceptionally fine particle size. Recovered from separated dredged sediment and post-processed into a consistent, high-quality product.",
+      "Kleifractie met een uitzonderlijk fijne deeltjesgrootte. Gewonnen uit gescheiden baggerspecie en nabewerkt tot een consistent, hoogwaardig product.":
+        "Clay fraction with an exceptionally fine particle size. Recovered from separated dredged sediment and post-processed into a consistent, high-quality product.",
       "Vraag specificaties aan": "Request specifications",
       "Terug naar grondstoffen": "Back to circular materials",
       Productspecificatie: "Product specification",
