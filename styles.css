@@ -25472,3 +25472,17 @@ body[data-page="home"] .home-mission-copy .home-mission-brand__blue {
 body[data-page="home"] .home-mission-copy .home-mission-brand__black {
   color: #000000;
 }
+
+/* Let desktop timeline detail cards grow enough to contain the active copy. */
+@media (min-width: 1001px) and (min-height: 680px) {
+  body[data-page="het-plan"] .plan-timeline-story.is-scroll-enabled .plan-timeline-map,
+  body[data-page="over-ons"] .about-plan-timeline.is-scroll-enabled .plan-timeline-map {
+    grid-template-rows: minmax(210px, 1fr) auto minmax(220px, 24vh, 280px);
+  }
+
+  body[data-page="het-plan"] .plan-timeline-story.is-scroll-enabled .plan-timeline-feature,
+  body[data-page="over-ons"] .about-plan-timeline.is-scroll-enabled .plan-timeline-feature {
+    height: auto;
+    min-height: clamp(220px, 24vh, 280px);
+  }
+}
